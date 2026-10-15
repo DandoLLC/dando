@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DANDO LLC: AI governance assessment, advisory and training for legal, compliance and risk teams adopting AI in regulated work. Led by Daniel D. Calloway III, attorney (DC, MD) and CAMS.">
+<link rel="canonical" href="https://dandollc.github.io/dando/">
+<meta name="theme-color" content="#1A1A1A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DANDO LLC">
+<meta property="og:title" content="DANDO LLC: AI governance for teams that take judgment seriously">
+<meta property="og:description" content="Assessment, advisory and training for legal, compliance and risk teams adopting AI in regulated work.">
+<meta property="og:url" content="https://dandollc.github.io/dando/">
+<meta property="og:image" content="https://dandollc.github.io/dando/ctw-ep01-cover.jpg">
+<meta name="twitter:card" content="summary">
 <title>DANDO LLC — Lineage in Service. Ideas Made Manifest.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -1001,17 +1011,166 @@
 
     .footer-links { flex-direction: column; gap: 1.5rem; }
   }
+
+  /* ===== 2026-10 PREVIEW ADDITIONS ===== */
+  :root { --gold-ink: #7A5F22; }
+  section[id] { scroll-margin-top: 72px; }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--gold); outline-offset: 3px;
+  }
+  .skip-link {
+    position: absolute; left: -9999px; top: 0.5rem; z-index: 200;
+    background: var(--black); color: var(--cream); padding: 0.6rem 1rem;
+    font-size: 0.8rem; text-decoration: none;
+  }
+  .skip-link:focus { left: 0.5rem; }
+
+  /* Text-size gold on light backgrounds uses a darker ink for contrast */
+  .argument .section-label, .series-title, .work-link, .contact-email,
+  .ctw .section-label, .ctw-paper a { color: var(--gold-ink); }
+  .work-link:hover, .contact-email:hover { color: var(--black); }
+
+  /* Mobile menu */
+  .nav-toggle {
+    display: none; background: none; border: 1px solid rgba(184,148,62,0.4);
+    color: var(--cream); font: 500 0.7rem var(--sans); letter-spacing: 0.15em;
+    text-transform: uppercase; padding: 0.55rem 0.9rem; cursor: pointer;
+    min-height: 44px;
+  }
+  nav.scrolled .nav-toggle { color: var(--black); }
+
+  /* Hero calls to action */
+  .hero-cta {
+    display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+    margin-top: 2.5rem; opacity: 0; animation: fadeUp 1s ease 1.2s forwards;
+  }
+  .btn-gold, .btn-line {
+    display: inline-block; font: 500 0.72rem var(--sans); letter-spacing: 0.16em;
+    text-transform: uppercase; text-decoration: none; padding: 0.95rem 1.6rem;
+    min-height: 44px; transition: all 0.3s ease;
+  }
+  .btn-gold { background: var(--gold); color: var(--black); border: 1px solid var(--gold); }
+  .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+  .btn-line { color: var(--cream); border: 1px solid rgba(245,240,232,0.35); }
+  .btn-line:hover { border-color: var(--gold); color: var(--gold-light); }
+  .btn-line.on-light { color: var(--black); border-color: rgba(26,26,26,0.35); }
+  .btn-line.on-light:hover { color: var(--gold-ink); border-color: var(--gold-ink); }
+
+  /* Services: audience line and per-offer inquiry */
+  .services-for {
+    margin-top: 1.25rem; font-size: 0.95rem; color: var(--silver-light);
+    font-style: normal !important;
+  }
+  .service-card { display: flex; flex-direction: column; }
+  .service-deliverables { flex: 1; }
+  .service-ask {
+    margin-top: 2rem; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold-light); text-decoration: none;
+    border-top: 1px solid rgba(184,148,62,0.2); padding-top: 1.25rem;
+  }
+  .service-ask:hover { color: var(--cream); }
+  .services-close {
+    max-width: 1000px; margin: 3.5rem auto 0; text-align: center;
+    position: relative; z-index: 2;
+  }
+  .services-close p { color: var(--silver); font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+  /* Close the Window */
+  .ctw { padding: 7rem 2rem; background: var(--white); }
+  .ctw-inner { max-width: 1000px; margin: 0 auto; }
+  .ctw-grid {
+    display: grid; grid-template-columns: 260px 1fr; gap: 4rem; align-items: start;
+  }
+  .ctw-cover-wrap { margin: 0; }
+  .ctw-cover { width: 100%; height: auto; display: block; border: 1px solid rgba(0,0,0,0.08); }
+  .ctw-cover-cap { font-size: 0.78rem; color: var(--metal); margin-top: 0.75rem; line-height: 1.6; }
+  .ctw h2 {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    font-weight: 400; line-height: 1.2; color: var(--black); margin-bottom: 1.5rem;
+  }
+  .ctw p a { color: var(--black); text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  .ctw p { font-size: 1rem; line-height: 1.85; color: var(--metal-dark); margin-bottom: 1.25rem; }
+  .ctw-question {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.45rem;
+    color: var(--black); border-left: 2px solid var(--gold); padding-left: 1.25rem;
+    margin: 2rem 0;
+  }
+  .ctw-papers { list-style: none; margin: 1rem 0 2rem; }
+  .ctw-paper { padding: 1rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .ctw-paper a {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500;
+    text-decoration: none;
+  }
+  .ctw-paper a:hover { text-decoration: underline; }
+  .ctw-paper span { display: block; font-size: 0.88rem; color: var(--metal); margin-top: 0.2rem; }
+  .ctw-sub {
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--metal); margin-top: 2.5rem;
+  }
+  .ctw-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+
+  /* Contact additions */
+  .contact-topics {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin: 2.5rem 0 1.5rem;
+  }
+  .contact-topics a {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--black); text-decoration: none; border: 1px solid rgba(26,26,26,0.25);
+    padding: 0.7rem 1.1rem; min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .contact-topics a:hover { border-color: var(--gold-ink); color: var(--gold-ink); }
+  .contact-note { font-size: 0.82rem !important; color: var(--metal) !important; margin: 1.5rem auto 0 !important; max-width: 480px; }
+
+  /* Footer: shared ecosystem row */
+  .footer-links { flex-wrap: wrap; row-gap: 1rem; }
+  .footer-eco {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 2rem;
+    margin: -1rem 0 2.5rem; font-size: 0.8rem;
+  }
+  .footer-eco a { color: var(--silver-light); text-decoration: none; }
+  .footer-eco a:hover, .footer-eco a[aria-current] { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    .nav-toggle { display: inline-flex; align-items: center; }
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; background: var(--black);
+      border-top: 1px solid rgba(184,148,62,0.2); padding: 0.5rem 1.5rem 1.25rem;
+    }
+    nav.open .nav-links { display: flex; }
+    nav.open { background: var(--black); }
+    nav.open .nav-brand, nav.open .nav-toggle { color: var(--cream); }
+    .nav-links li { border-bottom: 1px solid rgba(245,240,232,0.08); }
+    .nav-links a, nav.scrolled .nav-links a {
+      display: block; padding: 0.95rem 0; font-size: 0.8rem; color: var(--cream);
+    }
+    .nav-links a::after { display: none; }
+    .ctw { padding: 4.5rem 1.5rem; }
+    .ctw-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .ctw-cover-wrap { max-width: 180px; margin: 0; }
+    .services-close { margin-top: 2.5rem; }
+    .footer-links { flex-direction: row !important; gap: 1.25rem 2rem !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal, .hero-logo, .hero-overline, .hero h1, .hero-tagline, .hero-line,
+    .hero-description, .audio-overview, .hero-cta { opacity: 1 !important; transform: none !important; }
+    html { scroll-behavior: auto; }
+  }
 </style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 
 <!-- NAVIGATION -->
-<nav id="nav">
+<a class="skip-link" href="#services">Skip to services</a>
+<nav id="nav" aria-label="Main">
   <a href="#" class="nav-brand">DANDO</a>
-  <ul class="nav-links">
-    <li><a href="#argument">Thesis</a></li>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="#services">Services</a></li>
-    <li><a href="#domains">Domains</a></li>
+    <li><a href="#close-the-window">Close the Window</a></li>
+    <li><a href="#argument">Thesis</a></li>
     <li><a href="#works">Works</a></li>
     <li><a href="#architect">Architect</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -1028,11 +1187,16 @@
     <div class="hero-line"></div>
     <p class="hero-description">DANDO LLC builds frameworks for preserving human judgment under acceleration. For institutions adopting AI in regulated environments, for individuals reclaiming cognitive sovereignty, and for the relationships and identities that erode when systems move faster than the people inside them.</p>
 
+    <div class="hero-cta">
+      <a href="#services" class="btn-gold">Advisory services</a>
+      <a href="#contact" class="btn-line">Start a conversation</a>
+    </div>
+
     <!-- Audio Overview -->
     <div class="audio-overview">
       <div class="audio-player">
         <button class="audio-btn" id="audioBtn" onclick="toggleAudio()" aria-label="Play overview">&#9654;</button>
-        <div class="audio-progress-wrap" id="progressWrap" onclick="seekAudio(event)">
+        <div class="audio-progress-wrap" id="progressWrap" onclick="seekAudio(event)" role="slider" tabindex="0" aria-label="Seek overview audio" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0:00">
           <div class="audio-progress" id="audioProgress"></div>
         </div>
         <span class="audio-time" id="audioTime">0:00</span>
@@ -1047,25 +1211,13 @@
   </div>
 </section>
 
-<!-- THE ARGUMENT -->
-<section class="argument" id="argument">
-  <div class="argument-inner">
-    <div class="section-label reveal">Thesis</div>
-    <h2 class="reveal">In a convergence era, the quality of human reasoning is challenged.</h2>
-    <p class="reveal">Systems are accelerating. Coupling is tighter. Buffers are thinner. And the conventional responses&mdash;more controls, more tools, more training&mdash;are generating drag, noise, and false confidence rather than clearer judgment.</p>
-    <p class="reveal">The missing element is not another platform or policy library. It is coherence&mdash;the capacity of people and institutions to maintain judgment integrity under load. In practice, coherence is the alignment of three functions at the moments that matter: grounded perception, disciplined reasoning, and accountable memory.</p>
-    <p class="reveal">This problem runs deeper than any single technology. AI is a prominent accelerator and mirror of the broader regime, but the pattern is older: systems designed to move faster than the people inside them have always produced dependency. From the legal architecture of slavery to the algorithmic mediation of attention, the mechanism is the same&mdash;the instrument erodes the faculties required to govern it.</p>
-    <p class="reveal">DANDO LLC exists to name that pattern, trace it across domains, and build actionable frameworks for institutions, professionals, and individuals who refuse to be optimized against their own interests.</p>
-    <div class="argument-closing reveal">If the instrument erodes the faculties required to govern it, governance is already failing.</div>
-  </div>
-</section>
-
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="services-header">
     <div class="section-label reveal">Services</div>
     <h2 class="reveal">How We Work</h2>
     <p class="reveal">Governance architecture for organizations that take judgment seriously.</p>
+    <p class="reveal services-for">For general counsel, chief compliance officers, boards and the legal, compliance and risk teams putting AI to work in regulated environments.</p>
   </div>
 
   <div class="services-grid">
@@ -1080,6 +1232,7 @@
         <li>Risk-tier mapping and recommendation report</li>
         <li>Regulatory alignment review (EU AI Act, ABA, FTC)</li>
       </ul>
+      <a class="service-ask" href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Ask about an assessment &rarr;</a>
     </div>
 
     <div class="service-card reveal">
@@ -1093,6 +1246,7 @@
         <li>Quarterly REASON scoring and model re-evaluation</li>
         <li>Board and executive briefings on AI risk posture</li>
       </ul>
+      <a class="service-ask" href="mailto:daniel@dandollc.com?subject=Advisory%20inquiry">Ask about advisory &rarr;</a>
     </div>
 
     <div class="service-card reveal">
@@ -1106,7 +1260,62 @@
         <li>Executive sessions on coherence and cognitive sovereignty</li>
         <li>Conference keynotes and panel participation</li>
       </ul>
+      <a class="service-ask" href="mailto:daniel@dandollc.com?subject=Training%20inquiry">Ask about training &rarr;</a>
     </div>
+  </div>
+
+  <div class="services-close reveal">
+    <p>Every engagement starts with a short conversation about where AI already sits in your work.</p>
+    <a href="#contact" class="btn-gold">Start a conversation</a>
+  </div>
+</section>
+
+<!-- CLOSE THE WINDOW -->
+<section class="ctw" id="close-the-window">
+  <div class="ctw-inner">
+    <div class="section-label">Close the Window</div>
+    <div class="ctw-grid">
+      <figure class="ctw-cover-wrap">
+        <img class="ctw-cover" src="ctw-ep01-cover.jpg" width="540" height="960" loading="lazy"
+             alt="Episode 1 cover: a figure at a laptop casts a large gold shadow wearing a graduation cap, above the line &ldquo;AI is about to make all of us look smarter than we are.&rdquo;">
+        <figcaption class="ctw-cover-cap">Episode 1: The window test. 36 seconds.</figcaption>
+      </figure>
+      <div>
+        <h2>A short series on thinking with AI</h2>
+        <p>Each episode is a short animated story built around one question about what happens to professional judgment when AI does the first draft. The series is educational, not legal advice, and is made with AI.</p>
+        <p class="ctw-question">Close the window. Can you still explain it?</p>
+        <p>Episodes post on <a href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://x.com/callos_way" target="_blank" rel="noopener noreferrer">X</a>.</p>
+
+        <p class="ctw-sub">The research behind it</p>
+        <ul class="ctw-papers">
+          <li class="ctw-paper"><a href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Coherence Under Acceleration</a>
+            <span>How speed degrades judgment, and the controls that keep review real. SSRN.</span></li>
+          <li class="ctw-paper"><a href="https://arxiv.org/abs/2608.20220" target="_blank" rel="noopener noreferrer">InsufficiencyBench</a>
+            <span>How language models handle legal questions that are missing key facts. With Vincent, Yu, Bean and Seedat. arXiv.</span></li>
+          <li class="ctw-paper"><a href="https://papers.ssrn.com/abstract=6256058" target="_blank" rel="noopener noreferrer">The Hegemonic Function of AI</a>
+            <span>Why the tools we stop questioning gain authority over how we think. SSRN.</span></li>
+        </ul>
+
+        <p>If your team is working through these questions, the assessment is the place to start.</p>
+        <div class="ctw-actions">
+          <a href="#services" class="btn-line on-light">See the services</a>
+          <a href="mailto:daniel@dandollc.com?subject=Close%20the%20Window" class="btn-line on-light">Email Daniel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE ARGUMENT -->
+<section class="argument" id="argument">
+  <div class="argument-inner">
+    <div class="section-label reveal">Thesis</div>
+    <h2 class="reveal">In a convergence era, the quality of human reasoning is challenged.</h2>
+    <p class="reveal">Systems are accelerating. Coupling is tighter. Buffers are thinner. And the conventional responses&mdash;more controls, more tools, more training&mdash;are generating drag, noise, and false confidence rather than clearer judgment.</p>
+    <p class="reveal">The missing element is not another platform or policy library. It is coherence&mdash;the capacity of people and institutions to maintain judgment integrity under load. In practice, coherence is the alignment of three functions at the moments that matter: grounded perception, disciplined reasoning, and accountable memory.</p>
+    <p class="reveal">This problem runs deeper than any single technology. AI is a prominent accelerator and mirror of the broader regime, but the pattern is older: systems designed to move faster than the people inside them have always produced dependency. From the legal architecture of slavery to the algorithmic mediation of attention, the mechanism is the same&mdash;the instrument erodes the faculties required to govern it.</p>
+    <p class="reveal">DANDO LLC exists to name that pattern, trace it across domains, and build actionable frameworks for institutions, professionals, and individuals who refuse to be optimized against their own interests.</p>
+    <div class="argument-closing reveal">If the instrument erodes the faculties required to govern it, governance is already failing.</div>
   </div>
 </section>
 
@@ -1183,33 +1392,39 @@
 
     <!-- Academic -->
     <div class="works-series reveal">
-      <div class="series-title">Academic Scholarship &middot; SSRN</div>
+      <div class="series-title">Research &middot; SSRN and arXiv</div>
+      <div class="work-item">
+        <span class="work-name">InsufficiencyBench</span>
+        <div class="work-meta">
+          <span class="work-type">Benchmark Paper &middot; with Vincent, Yu, Bean &amp; Seedat &middot; Best Paper Honorable Mention, ICML 2026 AI for Law Workshop</span>
+          <a href="https://arxiv.org/abs/2608.20220" class="work-link" target="_blank" rel="noopener noreferrer">arXiv &rarr;</a>
+        </div>
+      </div>
       <div class="work-item">
         <span class="work-name">The Hegemonic Function of AI</span>
         <div class="work-meta">
-          <span class="work-type">Paper &middot; 30 pp.</span>
-          <a href="https://papers.ssrn.com/abstract=6256058" class="work-link" target="_blank">SSRN &rarr;</a>
+          <span class="work-type">Paper</span>
+          <a href="https://papers.ssrn.com/abstract=6256058" class="work-link" target="_blank" rel="noopener noreferrer">SSRN &rarr;</a>
         </div>
       </div>
       <div class="work-item">
         <span class="work-name">Coherence Under Acceleration</span>
         <div class="work-meta">
-          <span class="work-type">Framework Paper &middot; 95 pp.</span>
-          <a href="https://papers.ssrn.com/abstract=5960914" class="work-link" target="_blank">SSRN &rarr;</a>
+          <span class="work-type">Framework Paper</span>
+          <a href="https://papers.ssrn.com/abstract=5960914" class="work-link" target="_blank" rel="noopener noreferrer">SSRN &rarr;</a>
         </div>
       </div>
       <div class="work-item">
         <span class="work-name">The REASON Framework v2</span>
         <div class="work-meta">
           <span class="work-type">Framework Paper</span>
-          <a href="https://papers.ssrn.com/abstract=5374930" class="work-link" target="_blank">SSRN &rarr;</a>
+          <a href="https://papers.ssrn.com/abstract=5374930" class="work-link" target="_blank" rel="noopener noreferrer">SSRN &rarr;</a>
         </div>
       </div>
       <div class="work-item">
         <span class="work-name">The Hegemonic Function of Law in American Slavery</span>
         <div class="work-meta">
-          <span class="work-type">Paper</span>
-          <a href="https://papers.ssrn.com/abstract=6158707" class="work-link" target="_blank">SSRN &rarr;</a>
+          <span class="work-type">Law School Paper &middot; CALI Excellence Award, UConn Law</span>
         </div>
       </div>
     </div>
@@ -1255,8 +1470,8 @@
         <span class="work-name">The Art of Conscious Empowerment</span>
         <div class="work-meta">
           <span class="work-type">Book I</span>
-          <a href="https://callosway.gumroad.com/l/uqqcu" class="work-link" target="_blank">Gumroad &rarr;</a>
-          <a href="https://a.co/d/0d4IWPd1" class="work-link" target="_blank">Amazon &rarr;</a>
+          <a href="https://callosway.gumroad.com/l/uqqcu" class="work-link" target="_blank" rel="noopener noreferrer">Gumroad &rarr;</a>
+          <a href="https://a.co/d/0d4IWPd1" class="work-link" target="_blank" rel="noopener noreferrer">Amazon &rarr;</a>
         </div>
       </div>
       <div class="work-item">
@@ -1275,7 +1490,7 @@
         <span class="work-name">The Dependency Design</span>
         <div class="work-meta">
           <span class="work-type">Companion Work</span>
-          <a href="https://callosway.gumroad.com/l/kkjjal" class="work-link" target="_blank">Gumroad &rarr;</a>
+          <a href="https://callosway.gumroad.com/l/kkjjal" class="work-link" target="_blank" rel="noopener noreferrer">Gumroad &rarr;</a>
         </div>
       </div>
     </div>
@@ -1368,6 +1583,13 @@
     <div class="section-label" style="justify-content: center;">Get In Touch</div>
     <h2>Open to conversations about governance architecture, the judgment problem, or what it takes to deploy AI responsibly.</h2>
     <a href="mailto:daniel@dandollc.com" class="contact-email">daniel@dandollc.com</a>
+    <div class="contact-topics" aria-label="Email about a specific topic">
+      <a href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Assessment</a>
+      <a href="mailto:daniel@dandollc.com?subject=Advisory%20inquiry">Advisory</a>
+      <a href="mailto:daniel@dandollc.com?subject=Training%20inquiry">Training</a>
+      <a href="mailto:daniel@dandollc.com?subject=Speaking%20inquiry">Speaking</a>
+    </div>
+    <p class="contact-note">Please leave out confidential or privileged details in a first message. Contacting DANDO does not create an attorney-client relationship.</p>
   </div>
 </section>
 
@@ -1376,9 +1598,15 @@
   <div class="footer-brand">DANDO LLC</div>
   <div class="footer-tagline">Lineage in service. Ideas made manifest.</div>
   <div class="footer-links">
-    <a href="https://ssrn.com/author=7682344" target="_blank">SSRN</a>
-    <a href="https://www.linkedin.com/in/callowayesq/" target="_blank">LinkedIn</a>
+    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7682344" target="_blank" rel="noopener noreferrer">SSRN</a>
+    <a href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <a href="mailto:daniel@dandollc.com">Contact</a>
+  </div>
+  <div class="footer-eco" role="navigation" aria-label="Related sites">
+    <a href="https://dandollc.github.io/">Daniel D. Calloway III</a>
+    <a href="https://dandollc.github.io/dando/" aria-current="page">DANDO Advisory</a>
+    <a href="https://dandollc.github.io/callosway/">Callo&rsquo;s Way</a>
+    <a href="https://dandollc.github.io/thedependencydesign/">The Dependency Design</a>
   </div>
   <div class="footer-copyright">&copy; 2026 DANDO LLC. All rights reserved.</div>
 </footer>
@@ -1394,11 +1622,19 @@
     if (audio.paused) {
       audio.play();
       audioBtn.innerHTML = '&#9646;&#9646;';
+      audioBtn.setAttribute('aria-label', 'Pause overview');
     } else {
       audio.pause();
       audioBtn.innerHTML = '&#9654;';
+      audioBtn.setAttribute('aria-label', 'Play overview');
     }
   }
+  const progressWrap = document.getElementById('progressWrap');
+  progressWrap.addEventListener('keydown', (e) => {
+    if (!audio.duration) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { audio.currentTime = Math.min(audio.duration, audio.currentTime + 5); e.preventDefault(); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { audio.currentTime = Math.max(0, audio.currentTime - 5); e.preventDefault(); }
+  });
 
   audio.addEventListener('timeupdate', () => {
     if (audio.duration) {
@@ -1406,11 +1642,14 @@
       const m = Math.floor(audio.currentTime / 60);
       const s = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
       audioTime.textContent = m + ':' + s;
+      progressWrap.setAttribute('aria-valuenow', Math.round(audio.currentTime / audio.duration * 100));
+      progressWrap.setAttribute('aria-valuetext', m + ':' + s);
     }
   });
 
   audio.addEventListener('ended', () => {
     audioBtn.innerHTML = '&#9654;';
+    audioBtn.setAttribute('aria-label', 'Play overview');
     audioProgress.style.width = '0%';
     audioTime.textContent = '0:00';
   });
@@ -1425,6 +1664,22 @@
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 80);
+  });
+
+  // Mobile menu
+  const navToggle = document.getElementById('navToggle');
+  navToggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+    navToggle.textContent = open ? 'Close' : 'Menu';
+  });
+  document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.textContent = 'Menu';
+  }));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { navToggle.click(); navToggle.focus(); }
   });
 
   // Scroll reveal
