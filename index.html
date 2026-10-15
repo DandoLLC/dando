@@ -1095,6 +1095,9 @@
     color: var(--black); border-left: 2px solid var(--gold); padding-left: 1.25rem;
     margin: 2rem 0;
   }
+  .ctw-transcript { margin: -0.5rem 0 1.75rem; font-size: 0.92rem; }
+  .ctw-transcript summary { cursor: pointer; color: var(--gold-ink); font-weight: 500; min-height: 44px; display: flex; align-items: center; }
+  .ctw-transcript p { font-size: 0.92rem !important; margin-bottom: 0.75rem !important; }
   .ctw-papers { list-style: none; margin: 1rem 0 2rem; }
   .ctw-paper { padding: 1rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
   .ctw-paper a {
@@ -1276,14 +1279,24 @@
     <div class="section-label">Close the Window</div>
     <div class="ctw-grid">
       <figure class="ctw-cover-wrap">
-        <img class="ctw-cover" src="ctw-ep01-cover.jpg" width="540" height="960" loading="lazy"
-             alt="Episode 1 cover: a figure at a laptop casts a large gold shadow wearing a graduation cap, above the line &ldquo;AI is about to make all of us look smarter than we are.&rdquo;">
-        <figcaption class="ctw-cover-cap">Episode 1: The window test. 36 seconds.</figcaption>
+        <video class="ctw-cover" controls playsinline preload="none" poster="ctw-ep01-cover.jpg" width="540" height="960"
+               aria-label="Close the Window, Episode 1: The window test">
+          <source src="ctw-ep01.mp4" type="video/mp4">
+        </video>
+        <figcaption class="ctw-cover-cap">Episode 1: The window test. 36 seconds. Made with AI.</figcaption>
       </figure>
       <div>
         <h2>A short series on thinking with AI</h2>
         <p>Each episode is a short animated story built around one question about what happens to professional judgment when AI does the first draft. The series is educational, not legal advice, and is made with AI.</p>
         <p class="ctw-question">Close the window. Can you still explain it?</p>
+        <details class="ctw-transcript">
+          <summary>Read the transcript</summary>
+          <p>AI is about to make all of us look smarter than we are. It hands you a polished answer, and you pass it on like it&rsquo;s yours.</p>
+          <p>So try this. Close the window. Now explain it. Why is it right? What would make it wrong?</p>
+          <p>If the answer only lived in the window, this is the moment you find out.</p>
+          <p>In law, that&rsquo;s the job. A lawyer&rsquo;s signature says: &ldquo;I checked this, and I stand behind it,&rdquo; no matter who, or what, wrote the first draft.</p>
+          <p>Soon, that&rsquo;s everyone&rsquo;s job. Use the tool. Then close the window. Can you still explain it?</p>
+        </details>
         <p>Episodes post on <a href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://x.com/callos_way" target="_blank" rel="noopener noreferrer">X</a>.</p>
 
         <p class="ctw-sub">The research behind it</p>
@@ -1349,7 +1362,7 @@
       <div class="domain-audience">Cultural Reclamation &middot; Narrative Integrity</div>
       <p class="domain-description">Restore narrative integrity to identities shaped by hegemonic systems. From the legal architecture of American slavery to the algorithmic flattening of identity&mdash;tracing how power writes the story, and how to reclaim authorship.</p>
       <div class="domain-assets">
-        <span class="domain-asset">The Hegemonic Function of Law in American Slavery</span>
+        <span class="domain-asset">From CARE to Compliance</span>
         <span class="domain-asset">The Hegemonic Function of AI</span>
         <span class="domain-asset">Define Black</span>
       </div>
@@ -1394,9 +1407,16 @@
     <div class="works-series reveal">
       <div class="series-title">Research &middot; SSRN and arXiv</div>
       <div class="work-item">
+        <span class="work-name">From CARE to Compliance</span>
+        <div class="work-meta">
+          <span class="work-type">Framework Paper &middot; Indigenous Data Governance and the NIST AI RMF</span>
+          <a href="https://papers.ssrn.com/abstract=7587982" class="work-link" target="_blank" rel="noopener noreferrer">SSRN &rarr;</a>
+        </div>
+      </div>
+      <div class="work-item">
         <span class="work-name">InsufficiencyBench</span>
         <div class="work-meta">
-          <span class="work-type">Benchmark Paper &middot; with Vincent, Yu, Bean &amp; Seedat &middot; Best Paper Honorable Mention, ICML 2026 AI for Law Workshop</span>
+          <span class="work-type">Benchmark Paper &middot; with Vincent, Yu, Bean &amp; Seedat &middot; Oral Presentation and Best Paper Honorable Mention, ICML 2026 AI for Law Workshop</span>
           <a href="https://arxiv.org/abs/2608.20220" class="work-link" target="_blank" rel="noopener noreferrer">arXiv &rarr;</a>
         </div>
       </div>
@@ -1419,12 +1439,6 @@
         <div class="work-meta">
           <span class="work-type">Framework Paper</span>
           <a href="https://papers.ssrn.com/abstract=5374930" class="work-link" target="_blank" rel="noopener noreferrer">SSRN &rarr;</a>
-        </div>
-      </div>
-      <div class="work-item">
-        <span class="work-name">The Hegemonic Function of Law in American Slavery</span>
-        <div class="work-meta">
-          <span class="work-type">Law School Paper &middot; CALI Excellence Award, UConn Law</span>
         </div>
       </div>
     </div>
@@ -1463,6 +1477,26 @@
       </div>
     </div>
 
+    <!-- The Dependency Design -->
+    <div class="works-series reveal">
+      <div class="series-title">The Dependency Design</div>
+      <div class="work-item">
+        <span class="work-name">The Dependency Design</span>
+        <div class="work-meta">
+          <span class="work-type">Book</span>
+          <a href="https://dandollc.github.io/thedependencydesign/" class="work-link">Site &rarr;</a>
+          <a href="https://callosway.gumroad.com/l/kkjjal" class="work-link" target="_blank" rel="noopener noreferrer">Gumroad &rarr;</a>
+        </div>
+      </div>
+      <div class="work-item">
+        <span class="work-name">90-Day Guided Workbook</span>
+        <div class="work-meta">
+          <span class="work-type">Companion Workbook</span>
+          <a href="https://callosway.gumroad.com/l/ldypra" class="work-link" target="_blank" rel="noopener noreferrer">Gumroad &rarr;</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Books -->
     <div class="works-series reveal">
       <div class="series-title">The Callo's Way Series</div>
@@ -1471,7 +1505,8 @@
         <div class="work-meta">
           <span class="work-type">Book I</span>
           <a href="https://callosway.gumroad.com/l/uqqcu" class="work-link" target="_blank" rel="noopener noreferrer">Gumroad &rarr;</a>
-          <a href="https://a.co/d/0d4IWPd1" class="work-link" target="_blank" rel="noopener noreferrer">Amazon &rarr;</a>
+          <a href="https://www.amazon.com/dp/B0FJQRRY2C" class="work-link" target="_blank" rel="noopener noreferrer">Print &rarr;</a>
+          <a href="https://www.amazon.com/dp/B0FJQGDC87" class="work-link" target="_blank" rel="noopener noreferrer">Kindle &rarr;</a>
         </div>
       </div>
       <div class="work-item">
@@ -1484,13 +1519,6 @@
         <span class="work-name">The Inner Ecosystem</span>
         <div class="work-meta">
           <span class="work-type">Book III &middot; Forthcoming</span>
-        </div>
-      </div>
-      <div class="work-item">
-        <span class="work-name">The Dependency Design</span>
-        <div class="work-meta">
-          <span class="work-type">Companion Work</span>
-          <a href="https://callosway.gumroad.com/l/kkjjal" class="work-link" target="_blank" rel="noopener noreferrer">Gumroad &rarr;</a>
         </div>
       </div>
     </div>
