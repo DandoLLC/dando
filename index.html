@@ -368,6 +368,9 @@
   .services-close p {
     font-family: var(--f-display); font-size: 1.5rem; line-height: 1.3; color: #ece8e1; max-width: 32ch;
   }
+  .services-close .services-note {
+    flex-basis: 100%; font-family: var(--f-body); font-size: 0.875rem; line-height: 1.55; color: var(--eco-silver-dim); max-width: 60ch; margin: 0;
+  }
 
   /* ===== Close the Window ===== */
   .ctw-grid { display: grid; gap: 2.5rem; }
@@ -580,7 +583,7 @@
     .rail li + li { border-left: 1px solid var(--line); }
     .offers { grid-template-columns: repeat(3, 1fr); }
     .offer { padding: 2rem 1.75rem 0.5rem; }
-    .services-close { flex-direction: row; align-items: center; justify-content: space-between; }
+    .services-close { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; }
     .ctw-grid { grid-template-columns: 300px minmax(0, 1fr); column-gap: 4.5rem; align-items: start; }
     .ctw-figure { position: sticky; top: calc(var(--header-h) + 2rem); }
     .thesis p { font-size: 1.4375rem; }
@@ -745,7 +748,7 @@
           <li>AI governance readiness assessment</li>
           <li>REASON Framework evaluation of current AI outputs</li>
           <li>Risk-tier mapping and recommendation report</li>
-          <li>Regulatory alignment review (EU AI Act, ABA, FTC)</li>
+          <li>Gap review against the EU AI Act, ABA guidance and FTC expectations</li>
         </ul>
         <a class="offer-ask" href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Ask about an assessment<span class="arrow" aria-hidden="true">&rarr;</span></a>
       </article>
@@ -754,7 +757,7 @@
         <span class="offer-num">II</span>
         <h3>Advisory</h3>
         <p class="offer-type">Ongoing Engagement</p>
-        <p class="offer-desc">Ongoing counsel while your organization adopts AI: how decisions get made, who reviews what, and how professional judgment holds up in day-to-day operations.</p>
+        <p class="offer-desc">Ongoing advisory work while your organization adopts AI: how decisions get made, who reviews what, and how professional judgment holds up in day-to-day operations.</p>
         <ul>
           <li>Governance framework design and implementation</li>
           <li>Tiered adoption protocols with human-in-the-loop checkpoints</li>
@@ -782,6 +785,7 @@
     <div class="services-close">
       <p>Every engagement starts with a short conversation about where AI already sits in your work.</p>
       <a href="#contact" class="btn btn-gold">Start a conversation</a>
+      <p class="services-note">DANDO LLC is a consulting firm, not a law firm. Its assessments, advisory work and training are not legal services.</p>
     </div>
   </div>
 </section>
@@ -1097,7 +1101,7 @@
         <li><a href="mailto:daniel@dandollc.com?subject=Training%20inquiry">Training</a></li>
         <li><a href="mailto:daniel@dandollc.com?subject=Speaking%20inquiry">Speaking</a></li>
       </ul>
-      <p class="contact-note">Please leave out confidential or privileged details in a first message. Contacting DANDO does not create an attorney-client relationship.</p>
+      <p class="contact-note">Please leave out confidential or privileged details in a first message. DANDO LLC is a consulting firm, not a law firm: its assessments, advisory work and training are not legal services, and neither contacting nor engaging DANDO creates an attorney-client relationship. When a question calls for legal advice, DANDO will say so.</p>
     </div>
   </div>
 </section>
