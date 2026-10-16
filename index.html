@@ -113,31 +113,6 @@
   }
   .skip-link:focus { top: 8px; }
 
-  /* ===== 1. Ecosystem strip ===== */
-  .eco-strip {
-    background: var(--eco-ink);
-    border-bottom: 1px solid rgba(193, 154, 69, 0.18);
-  }
-  .eco-strip-inner {
-    display: flex; align-items: center; gap: 1.5rem;
-    max-width: var(--wrap); margin: 0 auto;
-    min-height: 36px;
-    padding: 0 var(--gutter-r) 0 var(--gutter);
-    overflow-x: auto; white-space: nowrap;
-    scrollbar-width: none; -ms-overflow-style: none;
-    scroll-snap-type: x proximity;
-  }
-  .eco-strip-inner::-webkit-scrollbar { display: none; }
-  .eco-strip a {
-    font-family: var(--f-body); font-size: 0.75rem; letter-spacing: 0.04em;
-    color: var(--eco-silver-dim); text-decoration: none;
-    display: inline-flex; align-items: center; min-height: 36px;
-    scroll-snap-align: start; flex-shrink: 0;
-  }
-  .eco-strip a:hover { color: var(--eco-silver); }
-  .eco-strip a[aria-current="page"] { color: var(--eco-gold-bright); }
-  .eco-strip a:focus-visible { outline: 2px solid var(--eco-gold-bright); outline-offset: -2px; }
-
   /* ===== 2. Site header ===== */
   .eco-header {
     position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
@@ -617,14 +592,6 @@
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="eco-strip">
-  <nav class="eco-strip-inner" aria-label="Daniel D. Calloway III sites">
-    <a href="https://dandollc.github.io/">Daniel D. Calloway III</a>
-    <a href="https://dandollc.github.io/dando/" aria-current="page">DANDO Advisory</a>
-    <a href="https://dandollc.github.io/callosway/">Callo&rsquo;s Way</a>
-    <a href="https://dandollc.github.io/thedependencydesign/">The Dependency Design</a>
-  </nav>
-</div>
 
 <header class="eco-header">
   <div class="eco-header-inner">
@@ -785,7 +752,7 @@
           <p>Soon, that&rsquo;s everyone&rsquo;s job. Use the tool. Then close the window. Can you still explain it?</p>
         </div>
       </details>
-      <p>Episodes post on <a href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://x.com/callos_way" target="_blank" rel="noopener noreferrer">X</a>.</p>
+      <p>Episodes post on <a href="https://www.youtube.com/@dandollc" target="_blank" rel="noopener noreferrer">YouTube</a>, <a href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://x.com/callos_way" target="_blank" rel="noopener noreferrer">X</a>.</p>
 
       <span class="label sub-label">The research behind it</span>
       <ul class="papers">
@@ -1080,13 +1047,10 @@
         <p class="eco-footer-name">DANDO LLC</p>
         <p class="eco-footer-tag">Lineage in service. Ideas made manifest.</p>
       </div>
-      <nav aria-label="Sites">
-        <h2>Sites</h2>
+      <nav aria-label="Daniel D. Calloway III">
+        <h2>Daniel D. Calloway III</h2>
         <ul>
-          <li><a href="https://dandollc.github.io/">Daniel D. Calloway III</a></li>
-          <li><a href="https://dandollc.github.io/dando/" aria-current="page">DANDO Advisory</a></li>
-          <li><a href="https://dandollc.github.io/callosway/">Callo&rsquo;s Way</a></li>
-          <li><a href="https://dandollc.github.io/thedependencydesign/">The Dependency Design</a></li>
+          <li><a href="https://dandollc.github.io/">About Daniel</a></li>
         </ul>
       </nav>
       <div>
@@ -1097,6 +1061,7 @@
           <li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7682344" target="_blank" rel="noopener noreferrer">SSRN</a></li>
           <li><a href="https://arxiv.org/abs/2608.20220" target="_blank" rel="noopener noreferrer">arXiv (InsufficiencyBench)</a></li>
           <li><a href="https://x.com/callos_way" target="_blank" rel="noopener noreferrer">X</a></li>
+          <li><a href="https://www.youtube.com/@dandollc" target="_blank" rel="noopener noreferrer">YouTube</a></li>
         </ul>
       </div>
     </div>
