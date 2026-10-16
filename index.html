@@ -373,6 +373,15 @@
   .ctw-figure .window { padding: 10px; }
   .ctw-figure video { width: 100%; background: #000; aspect-ratio: 9 / 16; }
   .ctw-figure figcaption { margin-top: 0.85rem; font-size: 0.875rem; color: var(--muted); }
+  [hidden] { display: none !important; }
+  .ctw-fallback { display: block; position: relative; text-decoration: none; }
+  .ctw-fallback img { display: block; width: 100%; height: auto; }
+  .ctw-fallback-label {
+    position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%);
+    background: var(--eco-gold); color: var(--eco-ink); font: 500 0.72rem var(--f-body);
+    letter-spacing: .14em; text-transform: uppercase; padding: 0.7rem 1rem; white-space: nowrap;
+  }
+  .ctw-fallback:hover .ctw-fallback-label, .ctw-fallback:focus-visible .ctw-fallback-label { background: var(--eco-gold-bright); }
   .ctw-body h2 {
     font-family: var(--f-display); font-size: 2.25rem; line-height: 1.12; color: var(--fg);
     margin: 0.9rem 0 1.25rem;
@@ -560,7 +569,7 @@
     .section-head h2, .ctw-body h2, .thesis h2 { font-size: 2.75rem; }
     .hero { padding: 4.5rem 0 4.5rem; }
     .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); column-gap: 4rem; align-items: stretch; }
-    .hero-aside { align-content: end; padding: 0 0 0.35rem; }
+    .hero-aside { align-content: center; padding: 0 0 0.35rem; }
     .rail ul { grid-template-columns: max-content max-content minmax(0, 1fr) minmax(0, 1.35fr); column-gap: 0; }
     .rail li { border-top: 0; padding: 1.1rem 1.5rem 1.1rem 2.6rem; }
     .rail li::before { left: 1.5rem; top: 1.55rem; }
@@ -588,6 +597,57 @@
   }
 </style>
 <script>document.documentElement.classList.add('js');</script>
+<script>
+// Episode 1: if the video file is not on this server yet, show the cover linked to the YouTube channel instead.
+(function () {
+  function swap() {
+    var v = document.getElementById('ctw-video'), f = document.getElementById('ctw-fallback');
+    if (!v || !f || !f.hidden) return;
+    v.hidden = true; f.hidden = false;
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var v = document.getElementById('ctw-video');
+    if (!v) return;
+    var src = v.querySelector('source');
+    if (src) src.addEventListener('error', swap);
+    try {
+      fetch('ctw-ep01.mp4', { method: 'HEAD' }).then(function (r) { if (!r.ok) swap(); }).catch(function () {});
+    } catch (e) {}
+  });
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DANDO LLC",
+  "url": "https://dandollc.github.io/dando/",
+  "logo": "https://dandollc.github.io/dando/dando-mark-on-dark.png",
+  "email": "daniel@dandollc.com",
+  "slogan": "Lineage in service. Ideas made manifest.",
+  "founder": {
+    "@type": "Person",
+    "name": "Daniel D. Calloway III",
+    "url": "https://dandollc.github.io/",
+    "jobTitle": "Regulatory and technology attorney; Founder and Principal, DANDO LLC",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "DANDO LLC",
+      "url": "https://dandollc.github.io/dando/"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/callowayesq/",
+      "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7682344",
+      "https://www.youtube.com/@dandollc",
+      "https://x.com/callos_way"
+    ]
+  },
+  "sameAs": [
+    "https://www.youtube.com/@dandollc",
+    "https://www.linkedin.com/in/callowayesq/"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -729,10 +789,14 @@
   <div class="wrap ctw-grid">
     <figure class="ctw-figure">
       <div class="window">
-        <video controls playsinline preload="none" poster="ctw-ep01-cover.jpg" width="540" height="960"
+        <video id="ctw-video" controls playsinline preload="none" poster="ctw-ep01-cover.jpg" width="540" height="960"
                aria-label="Close the Window, Episode 1: The window test">
           <source src="ctw-ep01.mp4" type="video/mp4">
         </video>
+        <a id="ctw-fallback" class="ctw-fallback" href="https://www.youtube.com/@dandollc" target="_blank" rel="noopener noreferrer" hidden>
+          <img src="ctw-ep01-cover.jpg" width="540" height="960" alt="Close the Window, Episode 1 cover: a figure at a laptop casts a large gold shadow wearing a graduation cap, above the line &ldquo;AI is about to make all of us look smarter than we are.&rdquo;">
+          <span class="ctw-fallback-label">Watch on YouTube &rarr;</span>
+        </a>
       </div>
       <figcaption>Episode 1: The window test. 36 seconds. Made with AI.</figcaption>
     </figure>
