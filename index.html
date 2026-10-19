@@ -480,6 +480,8 @@
   .entry-meta { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.02em; }
   .entry-title { font-family: var(--f-display); font-size: 1.375rem; font-weight: 500; line-height: 1.2; color: var(--fg); }
   .entry-type { font-size: 0.9375rem; color: var(--muted); }
+  .entry:has(.works-thumb) { position: relative; padding-right: 76px; }
+  .works-thumb { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 56px; height: auto; border-radius: 2px; box-shadow: 0 6px 16px rgba(0,0,0,.18), 0 0 0 1px rgba(0,0,0,.08); }
   .entry-links { display: flex; flex-wrap: wrap; gap: 0 1.25rem; margin-top: 0.1rem; }
   .entry-links a {
     display: inline-flex; align-items: center; min-height: 44px;
@@ -1003,6 +1005,7 @@
       <h3>The Dependency Design</h3>
       <div class="entry">
         <span class="entry-meta">Book</span>
+        <img class="works-thumb" src="dependency-design-cover.jpg" width="600" height="900" alt="Cover of The Dependency Design">
         <span class="entry-title">The Dependency Design</span>
         <span class="entry-links">
           <a href="https://dandollc.github.io/thedependencydesign/">Site<span class="arrow" aria-hidden="true">&rarr;</span></a>
@@ -1020,6 +1023,7 @@
       <h3>Individual Coherence</h3>
       <div class="entry">
         <span class="entry-meta">Book I</span>
+        <img class="works-thumb" src="callos-way-cover.jpg" width="600" height="900" alt="Cover of Callo&rsquo;s Way">
         <span class="entry-title">Callo&rsquo;s Way: The Art of Conscious Empowerment</span>
         <span class="entry-links">
           <a href="https://www.amazon.com/dp/B0FJQRRY2C" target="_blank" rel="noopener noreferrer">Print<span class="arrow" aria-hidden="true">&rarr;</span></a>
