@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DANDO LLC | AI governance advisory and research</title>
+<meta name="description" content="AI governance advisory and research for general counsel and chief compliance officers in regulated industries. Led by an attorney admitted in the District of Columbia and Maryland.">
+<link rel="canonical" href="https://dandollc.com/">
+<meta name="theme-color" content="#F4F0E8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DANDO LLC">
+<meta property="og:title" content="DANDO LLC: Know where your team uses AI, and whether anyone catches its mistakes">
+<meta property="og:description" content="An AI governance assessment for general counsel and chief compliance officers. You get a written report that ranks each risk and says what to fix first.">
+<meta property="og:url" content="https://dandollc.com/">
+<meta property="og:image" content="https://dandollc.com/social-card-light.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DANDO LLC: Know where your team uses AI, and whether anyone catches its mistakes">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DANDO LLC: Know where your team uses AI, and whether anyone catches its mistakes">
+<meta name="twitter:description" content="An AI governance assessment for general counsel and chief compliance officers. You get a written report that ranks each risk and says what to fix first.">
+<meta name="twitter:image" content="https://dandollc.com/social-card-light.jpg">
+<link rel="icon" type="image/png" href="dando-mark-nostar.png">
+<style>
+  /* Layout: one 72rem column. Palette follows the DANDO mark: ink and warm gray on a paper ground, gold as the accent. */
+  :root {
+    --bg: #F4F0E8;
+    --surface: #FBF9F5;
+    --fg: #1D1B1C;
+    --muted: #5B564F;
+    --line: #DDD6C8;
+    --line-strong: #8F887C;
+    --action: #1D1B1C;
+    --action-hover: #000000;
+    --on-action: #FBF9F5;
+    --accent: #7A5F22;
+    --gold: #C19A45;
+    --band: #EDE7DB;
+    --f-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --f-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --radius: 6px;
+    --wrap: 72rem;
+    --header-h: 64px;
+    color-scheme: light;
+  }
+  :root[data-theme="dark"] {
+    --bg: #121113;
+    --surface: #1C1A1D;
+    --fg: #ECE8E1;
+    --muted: #A8A39A;
+    --line: #34302F;
+    --line-strong: #6E6862;
+    --action: #C19A45;
+    --action-hover: #DCBD6E;
+    --on-action: #121113;
+    --accent: #DCBD6E;
+    --gold: #C19A45;
+    --band: #17161A;
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  * { margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
+  body {
+    background: var(--bg); color: var(--fg);
+    font-family: var(--f-sans); font-size: 1rem; line-height: 1.6;
+    -webkit-font-smoothing: antialiased; overflow-wrap: break-word;
+  }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--surface); }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  ul, ol { list-style: none; }
+  h1, h2, h3 { text-wrap: balance; color: var(--fg); }
+  p { text-wrap: pretty; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap {
+    width: 100%; max-width: var(--wrap); margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .eyebrow {
+    display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted); text-wrap: balance;
+  }
+
+  .skip-link {
+    position: absolute; left: 8px; top: -100px; z-index: 100;
+    background: var(--action); color: var(--on-action); padding: 0.7rem 1rem;
+    font-weight: 600; text-decoration: none; border-radius: var(--radius);
+  }
+  .skip-link:focus { top: 8px; }
+
+  /* Header */
+  .site-header {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+    background: var(--surface); border-bottom: 1px solid var(--line);
+  }
+  .header-inner { display: flex; align-items: center; gap: 1rem; min-height: var(--header-h); }
+  .brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; margin-right: auto; min-height: 44px; }
+  .brand img { height: 30px; width: auto; }
+  .brand-name { font-size: 1.0625rem; font-weight: 700; letter-spacing: 0.08em; }
+  .brand-name span { font-weight: 400; letter-spacing: 0.04em; color: var(--muted); }
+  .logo-dark { display: none !important; }
+  :root[data-theme="dark"] .logo-light { display: none !important; }
+  :root[data-theme="dark"] .logo-dark { display: block !important; }
+
+  .nav { display: flex; align-items: center; gap: 1.5rem; }
+  .nav a { font-size: 0.9375rem; color: var(--muted); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+  .nav a:hover { color: var(--fg); }
+  .nav .nav-cta { display: none; }
+  .theme-btn, .menu-btn {
+    font: 500 0.875rem/1 var(--f-sans); color: var(--fg); background: transparent;
+    border: 1px solid var(--line-strong); border-radius: var(--radius);
+    min-height: 40px; padding: 0 0.8rem; cursor: pointer;
+  }
+  .theme-btn:hover, .menu-btn:hover { border-color: var(--muted); }
+  .menu-btn { display: none; }
+
+  @media (max-width: 860px) {
+    .nav {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--surface); border-bottom: 1px solid var(--line);
+      padding: 0.25rem max(16px, env(safe-area-inset-right, 0px)) 1rem max(16px, env(safe-area-inset-left, 0px));
+      max-height: calc(100vh - var(--header-h) - env(safe-area-inset-top, 0px));
+      max-height: calc(100dvh - var(--header-h) - env(safe-area-inset-top, 0px));
+      overflow-y: auto; overscroll-behavior: contain;
+    }
+    .nav a { min-height: 48px; border-bottom: 1px solid var(--line); color: var(--fg); }
+    .nav .nav-cta { display: flex; justify-content: center; margin-top: 1rem; border: 0; color: var(--on-action); }
+    .nav .nav-cta:hover { color: var(--on-action); }
+    html:not(.js) .nav { position: static; flex: 0 0 100%; padding-left: 0; padding-right: 0; border-bottom: 0; max-height: none; overflow: visible; }
+    html:not(.js) .header-inner { flex-wrap: wrap; }
+    html.js .nav { display: none; }
+    html.js .nav.is-open { display: flex; }
+    html.js .menu-btn { display: inline-flex; align-items: center; }
+    .header-cta { display: none !important; }
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 46px; padding: 0 1.25rem; border-radius: var(--radius);
+    font: 600 0.9375rem/1.2 var(--f-sans); text-decoration: none;
+    border: 1px solid transparent; transition: background-color .15s ease, border-color .15s ease;
+  }
+  .btn-primary { background: var(--action); color: var(--on-action); border-color: var(--action); }
+  .btn-primary:hover { background: var(--action-hover); border-color: var(--action-hover); }
+  .btn-secondary { background: transparent; color: var(--fg); border-color: var(--line-strong); }
+  .btn-secondary:hover { border-color: var(--fg); }
+  .header-cta { min-height: 40px; font-size: 0.875rem; }
+
+  /* Sections */
+  .section { padding-block: 4.5rem; }
+  .section + .section { border-top: 1px solid var(--line); }
+  .section-head { max-width: 44rem; margin-bottom: 2.5rem; display: grid; gap: 0.75rem; }
+  .section-head h2 { font-size: clamp(1.625rem, 3vw, 2.125rem); line-height: 1.2; font-weight: 650; letter-spacing: -0.01em; }
+  .section-head p { color: var(--muted); max-width: 40rem; }
+
+  /* Hero */
+  .hero { padding-block: 4rem 4.5rem; }
+  .hero-grid { display: grid; gap: 2.5rem; }
+  .hero-grid > * { min-width: 0; }
+  .hero-copy { display: grid; gap: 1.25rem; align-content: start; }
+  .hero h1 { font-size: clamp(2.125rem, 5vw, 3.25rem); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; max-width: 20ch; }
+  .hero-lede { font-size: 1.125rem; color: var(--muted); max-width: 38rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+
+  .hero-note { font-size: 0.9375rem; color: var(--muted); }
+  .hero-note a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+  .hero-note a:hover { text-decoration-color: currentColor; }
+
+  .principles-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    border-top: 3px solid var(--gold);
+    padding: 1.5rem 1.5rem 0.5rem; display: grid; gap: 0.75rem; align-content: start;
+  }
+  .principles-card h2 { font-size: 1.125rem; font-weight: 650; }
+  .principles-example { color: var(--muted); font-size: 0.9375rem; margin-top: -0.35rem; }
+  .principles { counter-reset: principle; }
+  .principles li {
+    counter-increment: principle; display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0.5rem;
+    padding: 0.85rem 0; border-top: 1px solid var(--line); font-size: 1rem; line-height: 1.5;
+  }
+  .principles li::before {
+    content: counter(principle, decimal-leading-zero); font: 600 0.75rem/1.95 var(--f-mono);
+    color: var(--accent); font-variant-numeric: tabular-nums;
+  }
+
+  /* Point of view */
+  .thesis { border-top: 1px solid var(--line); }
+  .thesis-grid { display: grid; gap: 1.5rem; }
+  .thesis-grid > * { min-width: 0; }
+  .thesis-grid .section-head { margin-bottom: 0; align-content: start; }
+  .thesis-body { display: grid; gap: 1.1rem; max-width: 40rem; }
+  .thesis-body p { font-size: 1.0625rem; }
+  .thesis-body strong { font-weight: 650; }
+  .thesis-link a { color: var(--fg); font-weight: 600; text-decoration: none; display: inline-flex; min-height: 44px; align-items: center; }
+  .thesis-link a:hover { color: var(--accent); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+
+  .facts { display: grid; gap: 0; }
+  .facts li { display: grid; gap: 0.2rem; padding: 0.7rem 0; border-top: 1px solid var(--line); font-size: 1rem; line-height: 1.45; }
+  .facts .k { color: var(--muted); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* Services */
+  .services { background: var(--band); }
+  .offer-lead {
+    background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--fg);
+    border-radius: var(--radius); padding: 1.75rem 1.5rem 1.5rem; display: grid; gap: 1.75rem;
+  }
+  .offer-lead > * { min-width: 0; }
+  .offer-lead-intro { display: grid; gap: 0.9rem; align-content: start; }
+  .offer-lead h3 { font-size: clamp(1.5rem, 3vw, 1.875rem); font-weight: 650; line-height: 1.2; }
+  .offer-lead .btn { justify-self: start; margin-top: 0.25rem; }
+  .offer-receive { border-top: 1px solid var(--line); padding-top: 0.9rem; font-size: 1rem; }
+  .list-label { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+  .offers-two { display: grid; gap: 1rem; margin-top: 1rem; }
+  .offer-small {
+    margin-top: 2rem; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--gold);
+    border-radius: var(--radius); padding: 1.5rem; display: grid; gap: 1.25rem;
+  }
+  .offer-small > * { min-width: 0; }
+  .offer-small-intro { display: grid; gap: 0.75rem; align-content: start; }
+  .offer-small h3 { font-size: 1.375rem; font-weight: 650; }
+  .offer-small .offer-ask { border-top: 0; padding-top: 0; justify-self: start; }
+  .offer-small li { padding: 0.55rem 0 0.55rem 1.1rem; border-top: 1px solid var(--line); position: relative; font-size: 1rem; }
+  .offer-small li::before { content: ""; position: absolute; left: 0; top: 1.05rem; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .hero-alt { margin-top: -0.25rem; }
+  .offer {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.75rem 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 0.9rem;
+  }
+  .offer h3 { font-size: 1.375rem; font-weight: 650; }
+  .offer-type { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .offer-desc { color: var(--muted); }
+  .offer ul { flex: 1; display: grid; align-content: start; }
+  .offer li, .offer-lead li { padding: 0.55rem 0 0.55rem 1.1rem; border-top: 1px solid var(--line); position: relative; font-size: 1rem; }
+  .offer li::before, .offer-lead li::before { content: ""; position: absolute; left: 0; top: 1.05rem; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .offer-ask { display: inline-flex; align-items: center; min-height: 44px; color: var(--fg); font-weight: 600; font-size: 0.9375rem; text-decoration: none; border-top: 1px solid var(--line); padding-top: 0.5rem; }
+  .offer-ask:hover { color: var(--accent); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  .frameworks-note { margin-top: 1rem; font-size: 0.9375rem; color: var(--muted); display: grid; gap: 0.4rem; }
+  .frameworks-note ul { list-style: disc; padding-left: 1.2rem; }
+  .frameworks-note li { padding: 0; border: 0; font-size: inherit; }
+  .frameworks-note li::before { content: none; }
+
+  /* Approach */
+  .steps { display: grid; gap: 1.5rem; counter-reset: step; }
+  .step { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start; align-content: start; }
+  .step > div { min-width: 0; }
+  .step-num {
+    width: 2.25rem; height: 2.25rem; border-radius: 50%; border: 1px solid var(--gold);
+    color: var(--fg); font: 600 0.9375rem/2.15rem var(--f-sans); text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+  .step h3 { font-size: 1.0625rem; font-weight: 650; margin-bottom: 0.25rem; }
+  .step p { color: var(--muted); font-size: 1rem; }
+
+  /* Research */
+  .papers { display: grid; }
+  .paper { display: grid; gap: 0.25rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
+  .paper:last-child { border-bottom: 1px solid var(--line); }
+  .paper-meta { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .paper a.paper-title { font-size: 1.0625rem; font-weight: 650; color: var(--fg); text-decoration: none; }
+  .paper a.paper-title:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .paper p { color: var(--muted); font-size: 1rem; max-width: 46rem; }
+  .research-foot { margin-top: 1.5rem; }
+  .research-foot a { color: var(--fg); font-weight: 600; text-decoration: none; display: inline-flex; min-height: 44px; align-items: center; }
+  .research-foot a:hover { color: var(--accent); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+
+  /* About */
+  .about-layout { display: grid; gap: 2rem; }
+  .about-layout > * { min-width: 0; }
+  .about-text { display: grid; gap: 1.1rem; align-content: start; max-width: 44rem; }
+  .about-bio { font-size: 1.0625rem; color: var(--fg); }
+  .about-more { font-size: 1rem; color: var(--muted); }
+  .about-more .list-label { margin-bottom: 0.2rem; }
+  .profile {
+    background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--gold);
+    border-radius: var(--radius); padding: 1.5rem 1.5rem 0.75rem; display: grid; gap: 1rem; align-content: start;
+  }
+  .profile-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
+  .profile-name { font-size: 1.125rem; font-weight: 650; }
+  .profile .role { color: var(--muted); font-size: 0.9375rem; margin-top: 0.15rem; }
+  .profile-link { display: inline-flex; align-items: center; min-height: 48px; border-top: 1px solid var(--line); color: var(--fg); font-weight: 600; font-size: 0.9375rem; text-decoration: none; }
+  .profile-link:hover { color: var(--accent); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+
+  /* Contact */
+  .contact { background: var(--band); }
+  .contact-inner { max-width: 44rem; display: grid; gap: 1.25rem; }
+  .contact h2 { font-size: clamp(1.625rem, 3vw, 2.125rem); line-height: 1.2; font-weight: 650; }
+  .contact-email { font-size: clamp(1.25rem, 3vw, 1.625rem); font-weight: 650; color: var(--fg); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 5px; text-decoration-thickness: 2px; word-break: break-all; }
+  .topics { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .topics a { display: inline-flex; align-items: center; min-height: 42px; padding: 0 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); text-decoration: none; font-size: 0.9375rem; font-weight: 500; }
+  .topics a:hover { border-color: var(--fg); color: var(--fg); }
+  .contact-note { font-size: 0.9375rem; color: var(--muted); }
+
+  /* Footer */
+  .site-footer { border-top: 1px solid var(--line); background: var(--surface); padding-block: 3rem calc(2rem + env(safe-area-inset-bottom, 0px)); }
+  .footer-grid { display: grid; gap: 2rem; }
+  .footer-brand img { height: 36px; width: auto; }
+  .footer-brand p { margin-top: 0.75rem; font-weight: 700; letter-spacing: 0.08em; }
+  .footer-brand .tag { font-weight: 400; letter-spacing: 0; color: var(--muted); font-size: 0.9375rem; margin-top: 0.25rem; }
+  .site-footer h2 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+  .site-footer li a { display: inline-flex; align-items: center; min-height: 40px; text-decoration: none; font-size: 0.9375rem; }
+  .site-footer li a:hover { color: var(--accent); }
+  .footer-bottom { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: grid; gap: 0.5rem; font-size: 0.8125rem; color: var(--muted); }
+  .footer-bottom p { max-width: 70ch; }
+
+  @media (min-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .paper { grid-template-columns: 14rem 1fr; column-gap: 2rem; align-items: baseline; }
+    .paper-meta { grid-row: 1 / span 2; }
+    .steps { grid-template-columns: 1fr 1fr; column-gap: 2.5rem; }
+  }
+  @media (min-width: 760px) {
+    .offers-two { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 960px) {
+    .section { padding-block: 6rem; }
+    .hero { padding-block: 5.5rem 6rem; }
+    .hero-grid { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); column-gap: 3.5rem; align-items: center; }
+    .offer-lead { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: 3rem; padding: 2.25rem 2.25rem 2rem; }
+    .offer-small { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: 3rem; padding: 1.75rem 2.25rem; }
+    .thesis-grid { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); column-gap: 3.5rem; }
+    .steps { grid-template-columns: repeat(4, 1fr); }
+    .step { grid-template-columns: 1fr; }
+    .about-layout { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); column-gap: 3.5rem; }
+    .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+  }
+</style>
+<script>
+  document.documentElement.classList.add('js');
+  try { if (localStorage.getItem('dando-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DANDO LLC",
+  "url": "https://dandollc.com/",
+  "logo": "https://dandollc.com/dando-mark-on-light.png",
+  "email": "daniel@dandollc.com",
+  "description": "AI governance advisory and research for general counsel and chief compliance officers in regulated industries.",
+  "founder": {
+    "@type": "Person",
+    "name": "Daniel D. Calloway III",
+    "url": "https://www.linkedin.com/in/callowayesq/",
+    "jobTitle": "Founder and Principal, DANDO LLC",
+    "sameAs": [
+      "https://www.linkedin.com/in/callowayesq/",
+      "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7682344"
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./" aria-label="DANDO LLC home">
+      <img class="logo-light" src="dando-mark-on-light.png" width="186" height="192" alt="" aria-hidden="true">
+      <img class="logo-dark" src="dando-mark-on-dark.png" width="186" height="192" alt="" aria-hidden="true">
+      <span class="brand-name">DANDO <span>LLC</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Sections">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#research">Research</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Start a conversation</a>
+    </nav>
+    <button class="theme-btn" type="button" id="theme-btn" aria-pressed="false">Dark</button>
+    <a class="btn btn-primary header-cta" href="#contact">Start a conversation</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">AI governance for general counsel and chief compliance officers at insurers and banks</span>
+      <h1 id="hero-title">Know where your team uses AI, and whether anyone catches its mistakes.</h1>
+      <p class="hero-lede">An AI governance assessment answers both questions. You get a written report that ranks each risk and says what to fix first. When a regulator or your board asks, you will have an answer.</p>
+      <div class="hero-actions">
+        <a href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry" class="btn btn-primary">Ask about an assessment</a>
+        <a href="#services" class="btn btn-secondary">See what it covers</a>
+      </div>
+      <p class="hero-note">Led by <a href="#about">an attorney</a> admitted in the District of Columbia and Maryland, with 15+ years in financial services compliance.</p>
+    </div>
+
+    <aside class="principles-card" aria-labelledby="principles-title">
+      <h2 id="principles-title">How it works</h2>
+      <p class="principles-example">Say your loan or operations team uses an AI tool to process customer files.</p>
+      <ol class="principles">
+        <li>I map where the tool touches regulated data, and who is supposed to check its output.</li>
+        <li>I test a sample of its output against the source files, using a published method, to measure the error rate and see whether the human review catches the mistakes.</li>
+        <li>I set up a sign-off log, so every review leaves an audit trail.</li>
+        <li>You get a board-ready report that ranks the risks and says what to fix first.</li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+
+<section class="section services" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Services</span>
+      <h2 id="services-title">Start with the assessment</h2>
+      <p>The AI governance assessment has a set scope and ends with a written report. Advisory and training can follow it or stand on their own.</p>
+    </div>
+
+    <article class="offer-lead" aria-labelledby="assessment-title">
+      <div class="offer-lead-intro">
+        <span class="offer-type">First step</span>
+        <h3 id="assessment-title">AI governance assessment</h3>
+        <p class="offer-desc">A look at where your team uses AI, and whether the people who review its work would catch a mistake.</p>
+        <div class="offer-receive">
+          <span class="list-label">What you receive</span>
+          <p>A written report that ranks each problem by risk and says what to fix first. A board member can follow it.</p>
+        </div>
+        <a class="btn btn-primary" href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Ask about an assessment</a>
+      </div>
+      <div>
+        <span class="list-label">What it covers</span>
+        <ul>
+          <li>Which AI tools your team uses, and for what</li>
+          <li>What data goes into each tool, and whether it should</li>
+          <li>How risky each use is</li>
+          <li>Who reviews each tool&rsquo;s work, and whether they could catch a mistake</li>
+          <li>A scored sample of the AI&rsquo;s work, using a method from my published research</li>
+          <li>Whether your outside law firms and vendors use AI on your work</li>
+          <li>How your practice compares with the rules and guidance below</li>
+        </ul>
+        <div class="frameworks-note">
+          <p>The comparison uses:</p>
+          <ul>
+            <li>The National Association of Insurance Commissioners (NAIC) Model Bulletin on the use of AI systems by insurers, as adopted in your state</li>
+            <li>American Bar Association Formal Opinion 512, on lawyers&rsquo; use of AI tools</li>
+            <li>The National Institute of Standards and Technology (NIST) AI Risk Management Framework</li>
+            <li>Federal Trade Commission guidance on AI</li>
+            <li>The European Union AI Act</li>
+          </ul>
+          <p>The comparison is not a legal opinion.</p>
+        </div>
+      </div>
+    </article>
+
+    <div class="offers-two">
+      <article class="offer">
+        <span class="offer-type">Ongoing engagement</span>
+        <h3>Advisory</h3>
+        <p class="offer-desc">Ongoing help as your AI use grows, so reviews keep working day to day.</p>
+        <ul>
+          <li>Designing and rolling out your AI rules</li>
+          <li>Clear rules for when a person must review AI work</li>
+          <li>Regular reviews of your AI tools and vendors</li>
+          <li>Briefings on AI risk for your board and leaders</li>
+        </ul>
+        <a class="offer-ask" href="mailto:daniel@dandollc.com?subject=Advisory%20inquiry">Ask about advisory &rarr;</a>
+      </article>
+
+      <article class="offer">
+        <span class="offer-type">Workshops and speaking</span>
+        <h3>Training</h3>
+        <p class="offer-desc">Hands-on sessions that teach your team to review AI work before anyone relies on it.</p>
+        <ul>
+          <li>Workshops for legal, compliance and risk teams</li>
+          <li>Conference talks and panels</li>
+        </ul>
+        <a class="offer-ask" href="mailto:daniel@dandollc.com?subject=Training%20inquiry">Ask about training &rarr;</a>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="approach" aria-labelledby="approach-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Approach</span>
+      <h2 id="approach-title">How an assessment runs</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <div>
+          <h3>A short call</h3>
+          <p>You tell me where your team uses AI and what is at stake.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <div>
+          <h3>Review</h3>
+          <p>I look at your AI tools and policies, then at how reviews really happen.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <div>
+          <h3>Written report</h3>
+          <p>The report ranks each problem by risk and says what to fix first.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">4</span>
+        <div>
+          <h3>Follow-through</h3>
+          <p>If you want help making the fixes, the work can continue as advisory.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section thesis" id="thesis" aria-labelledby="thesis-title">
+  <div class="wrap thesis-grid">
+    <div class="section-head">
+      <span class="eyebrow">Why it matters</span>
+      <h2 id="thesis-title">Why reviews break down when AI speeds up the work</h2>
+    </div>
+    <div class="thesis-body">
+      <p>AI can write a draft or score a risk in seconds. A person still has to review it, often with less time than before. So the review shrinks to a quick look. If the answer looks right, it goes out.</p>
+      <p>More rules rarely fix this. Many add steps without making the review any better.</p>
+      <p>Enterprise AI platforms keep a log of each question and answer. The log doesn&rsquo;t show whether anyone reviewed the answer against the source.</p>
+      <p>A review works when the reviewer could actually catch a mistake. It also needs a record that shows it happened.</p>
+      <p class="thesis-link"><a href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Read the research: Coherence Under Acceleration &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research" aria-labelledby="research-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Research</span>
+      <h2 id="research-title">The research behind the work</h2>
+      <p>The advice draws on my published research about how AI changes professional judgment and how to test AI on legal work. The papers are posted on the Social Science Research Network (SSRN) and arXiv.</p>
+    </div>
+    <div class="papers">
+      <div class="paper">
+        <span class="paper-meta">SSRN 5960914 &middot; revised October 2026</span>
+        <a class="paper-title" href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Coherence Under Acceleration</a>
+        <p>How speed weakens judgment, and which controls keep reviews real.</p>
+      </div>
+      <div class="paper">
+        <span class="paper-meta">arXiv 2608.20220 &middot; August 2026</span>
+        <a class="paper-title" href="https://arxiv.org/abs/2608.20220" target="_blank" rel="noopener noreferrer">InsufficiencyBench</a>
+        <p>How AI models answer legal questions that leave out key facts. Written with Vincent, Yu, Bean and Seedat. Best Paper Honorable Mention and an oral presentation at the AI for Law Workshop, International Conference on Machine Learning (ICML) 2026.</p>
+      </div>
+      <div class="paper">
+        <span class="paper-meta">SSRN 7587982 &middot; 2026</span>
+        <a class="paper-title" href="https://papers.ssrn.com/abstract=7587982" target="_blank" rel="noopener noreferrer">From CARE to Compliance</a>
+        <p>Maps Indigenous data governance principles onto the NIST AI Risk Management Framework.</p>
+      </div>
+      <div class="paper">
+        <span class="paper-meta">SSRN 5374930 &middot; August 2025</span>
+        <a class="paper-title" href="https://papers.ssrn.com/abstract=5374930" target="_blank" rel="noopener noreferrer">The REASON Framework v2</a>
+        <p>A method for grading the legal reasoning in AI answers.</p>
+      </div>
+      <div class="paper">
+        <span class="paper-meta">SSRN 5283593 &middot; June 2025</span>
+        <a class="paper-title" href="https://papers.ssrn.com/abstract=5283593" target="_blank" rel="noopener noreferrer">A Multidimensional Rubric for Evaluating Legal Reasoning in Generative AI</a>
+        <p>The earlier rubric that led to the REASON Framework.</p>
+      </div>
+    </div>
+    <p class="research-foot"><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7682344" target="_blank" rel="noopener noreferrer">All papers on SSRN &rarr;</a></p>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">About</span>
+      <h2 id="about-title">You work directly with me</h2>
+    </div>
+    <div class="about-layout">
+      <div class="about-text">
+        <p class="about-bio">I founded DANDO and do every engagement myself. I&rsquo;m a regulatory attorney who came to AI from compliance work: 15+ years across anti-money laundering rules, healthcare privacy, private equity compliance and large-firm practice. Alongside this practice, I test leading AI models on legal tasks with the teams that build them.</p>
+        <p class="about-more"><span class="list-label">Education</span>Juris Doctor, University of Connecticut School of Law. Bachelor of Arts in Criminology and Criminal Justice, University of Maryland, College Park.</p>
+      </div>
+      <aside class="profile" aria-labelledby="profile-name">
+        <div>
+          <p class="profile-name" id="profile-name">Daniel D. Calloway&nbsp;III</p>
+          <p class="role">Founder and Principal</p>
+        </div>
+        <ul class="facts">
+          <li><span class="k">Bar admissions</span><span>District of Columbia and Maryland</span></li>
+          <li><span class="k">Certification</span><span>Certified Anti-Money Laundering Specialist (CAMS), with a Sanctions Compliance Certificate</span></li>
+          <li><span class="k">Experience</span><span>15+ years in compliance, legal and governance work</span></li>
+          <li><span class="k">Research</span><span>Best Paper Honorable Mention, AI for Law Workshop at ICML 2026</span></li>
+        </ul>
+        <a class="profile-link" href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn profile &rarr;</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact-inner">
+      <span class="eyebrow">Contact</span>
+      <h2 id="contact-title">Ask about an assessment, or invite me to speak.</h2>
+      <a href="mailto:daniel@dandollc.com" class="contact-email">daniel@dandollc.com</a>
+      <ul class="topics" aria-label="Email about a specific topic">
+        <li><a href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Assessment</a></li>
+        <li><a href="mailto:daniel@dandollc.com?subject=Advisory%20inquiry">Advisory</a></li>
+        <li><a href="mailto:daniel@dandollc.com?subject=Training%20inquiry">Training</a></li>
+        <li><a href="mailto:daniel@dandollc.com?subject=Speaking%20inquiry">Speaking</a></li>
+      </ul>
+      <p class="contact-note">Please don&rsquo;t send confidential information in your first message.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="logo-light" src="dando-mark-on-light.png" width="186" height="192" alt="" aria-hidden="true">
+        <img class="logo-dark" src="dando-mark-on-dark.png" width="186" height="192" alt="" aria-hidden="true">
+        <p>DANDO LLC</p>
+        <p class="tag">AI governance advisory and research</p>
+      </div>
+      <nav aria-label="Contact">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:daniel@dandollc.com">daniel@dandollc.com</a></li>
+          <li><a href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Research</h2>
+        <ul>
+          <li><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7682344" target="_blank" rel="noopener noreferrer">Social Science Research Network</a></li>
+          <li><a href="https://arxiv.org/abs/2608.20220" target="_blank" rel="noopener noreferrer">arXiv</a></li>
+        </ul>
+      </div>
+      <nav aria-label="Services">
+        <h2>Services</h2>
+        <ul>
+          <li><a href="./#services">AI governance assessment</a></li>
+          <li><a href="makeover.html">Practical AI setup for independent businesses</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 DANDO LLC. The name and logo are trademarks of the company.</p>
+      <p>DANDO LLC is an advisory and research company and does not provide legal services. Contacting or engaging the company does not create an attorney-client relationship.</p>
+      <p>Daniel D. Calloway&nbsp;III, attorney admitted in the District of Columbia and Maryland, is responsible for this page's content.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var tBtn = document.getElementById('theme-btn');
+  function syncTheme() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    tBtn.textContent = dark ? 'Light' : 'Dark';
+    tBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    tBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  tBtn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('dando-theme', next); } catch (e) {}
+    syncTheme();
+  });
+  syncTheme();
+
+  var btn = document.querySelector('.menu-btn');
+  var nav = document.getElementById('site-nav');
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Close' : 'Menu';
+  }
+  function isOpen() { return btn.getAttribute('aria-expanded') === 'true'; }
+  function inMenu(el) { return !!el && (el === btn || nav.contains(el)); }
+  btn.addEventListener('click', function () {
+    var open = !isOpen();
+    setMenu(open);
+    if (open) { var first = nav.querySelector('a'); if (first) first.focus(); }
+  });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  function closeOnLeave(e) { if (isOpen() && e.relatedTarget && !inMenu(e.relatedTarget)) setMenu(false); }
+  nav.addEventListener('focusout', closeOnLeave);
+  btn.addEventListener('focusout', closeOnLeave);
+  document.addEventListener('focusin', function (e) { if (isOpen() && !inMenu(e.target)) setMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen()) { setMenu(false); btn.focus(); }
+  });
+})();
+</script>
+</body>
+</html>
