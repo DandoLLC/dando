@@ -439,9 +439,9 @@
       <h2 id="principles-title">How it works</h2>
       <p class="principles-example">Say your loan or operations team uses an AI tool to process customer files.</p>
       <ol class="principles">
-        <li>I map where the tool touches regulated data, and who is supposed to check its output.</li>
+        <li>I map where the tool touches regulated data, and find the few points where a wrong answer would reach a customer, a regulator or a legal position.</li>
         <li>I test a sample of its output against the source files, using a published method, to measure the error rate and see whether the human review catches the mistakes.</li>
-        <li>I set up a sign-off log, so every review leaves an audit trail.</li>
+        <li>I set up a sign-off log at those points only, so the reviews that matter leave an audit trail.</li>
         <li>You get a board-ready report that ranks the risks and says what to fix first.</li>
       </ol>
     </aside>
@@ -477,7 +477,7 @@
         <ul>
           <li>Which AI tools your team uses, and for what</li>
           <li>What data goes into each tool, and whether it should</li>
-          <li>How risky each use is</li>
+          <li>How risky each use is, and which few uses need a named reviewer</li>
           <li>Who reviews each tool&rsquo;s work, and whether they could catch a mistake</li>
           <li>A scored sample of the AI&rsquo;s work, using a method from my published research</li>
           <li>Whether your outside law firms and vendors use AI on your work</li>
@@ -551,7 +551,7 @@
       <p>AI can write a draft or score a risk in seconds. A person still has to review it, often with less time than before. So the review shrinks to a quick look. If the answer looks right, it goes out.</p>
       <p>More rules rarely fix this. Many add steps without making the review any better.</p>
       <p>Enterprise AI platforms keep a log of each question and answer. The log doesn&rsquo;t show whether anyone reviewed the answer against the source.</p>
-      <p>A review works when the reviewer could actually catch a mistake. It also needs a record that shows it happened. This is what that record looks like:</p>
+      <p>Most everyday AI use needs only simple rules: which tools are approved, and what data stays out. A few decisions need more, the ones where AI output reaches a customer, a regulator or a legal position. Those need a reviewer who could actually catch a mistake, and a record that shows the review happened. This is what that record looks like:</p>
       <table class="log">
         <caption>Sign-off log, illustrative excerpt. Names and files are invented.</caption>
         <thead><tr><th scope="col">File</th><th scope="col">AI output</th><th scope="col">Reviewer</th><th scope="col">Checked against</th><th scope="col">Result</th></tr></thead>
@@ -561,7 +561,7 @@
           <tr><td>UW-0877</td><td>Declination letter</td><td>M. Chen</td><td>Underwriting file</td><td class="ok">Accurate</td></tr>
         </tbody>
       </table>
-      <p class="log-note">One line per review: who looked, what they compared it with, and what they found. When an examiner asks, this is the answer.</p>
+      <p class="log-note">One line per review, kept only at those few points: who looked, what they compared it with, and what they found. When an examiner asks, this is the answer.</p>
       <p class="thesis-link"><a href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Read the research: Coherence Under Acceleration &rarr;</a></p>
     </div>
   </div>
