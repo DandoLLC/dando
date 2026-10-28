@@ -273,6 +273,41 @@
   .about-layout { display: grid; gap: 2rem; }
   .about-layout > * { min-width: 0; }
   .about-text { display: grid; gap: 1.1rem; align-content: start; max-width: 44rem; }
+  /* Pictures of the work */
+  .figure { margin: 1.5rem 0 0; }
+  .figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+  .figure figcaption { margin-top: 0.6rem; font-size: 0.875rem; color: var(--muted); }
+  .figure a { color: inherit; }
+  .flow { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; counter-reset: s; }
+  .flow li { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 1rem; align-items: start; align-content: start; }
+  .flow li > div { padding-top: 0.9rem; }
+  .flow .fn { width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--gold); display: grid; place-items: center; font-weight: 700; font-size: 1.125rem; color: var(--accent); background: var(--surface); position: relative; z-index: 1; }
+  .flow li + li::before { content: ""; position: absolute; left: 27px; top: -1rem; height: 1rem; border-left: 2px solid var(--gold); }
+  .flow h3 { margin: 0 0 0.25rem; font-size: 1.0625rem; }
+  .flow p { margin: 0; color: var(--muted); }
+  .flow .out { display: inline-block; margin-top: 0.4rem; font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.6rem; }
+  @media (min-width: 860px) {
+    .flow { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+    .flow li { grid-template-columns: 1fr; }
+    .flow li > div { padding-top: 0.25rem; }
+    .flow li + li::before { left: -1.5rem; top: 27px; width: 1.5rem; height: 0; border-left: 0; border-top: 2px solid var(--gold); }
+  }
+  .log { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-top: 1.25rem; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--surface); }
+  .log caption { caption-side: top; text-align: left; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0 0 0.5rem; }
+  .log th, .log td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .log td:first-child { white-space: nowrap; font-family: var(--f-mono); font-size: 0.8125rem; }
+  @media (max-width: 640px) { .log { display: block; overflow-x: auto; } }
+  .log th { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--bg); }
+  .log tr:last-child td { border-bottom: 0; }
+  .log .ok { color: #1A6B3A; font-weight: 600; } .log .fix { color: #9B2C1F; font-weight: 600; }
+  :root[data-theme="dark"] .log .ok { color: #7ED39B; } :root[data-theme="dark"] .log .fix { color: #F08A7A; }
+  .log-note { font-size: 0.875rem; color: var(--muted); margin-top: 0.6rem; }
+  .latest-wrap { margin: -0.5rem 0 2.25rem; max-width: 38rem; }
+  .latest { display: grid; gap: 0; margin: 0.25rem 0 0; padding: 0; list-style: none; }
+  .latest li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; padding: 0.6rem 0; border-top: 1px solid var(--line); }
+  .latest li:first-child { border-top: 0; }
+  .latest time { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); padding-top: 0.2rem; }
+  .contact-lead { max-width: 40rem; margin: 0; color: var(--muted); }
   .about-bio { font-size: 1.0625rem; color: var(--fg); }
   .about-more { font-size: 1rem; color: var(--muted); }
   .about-more .list-label { margin-bottom: 0.2rem; }
@@ -394,7 +429,7 @@
       <h1 id="hero-title">Know where your team uses AI, and whether anyone catches its mistakes.</h1>
       <p class="hero-lede">An AI governance assessment answers both questions. You get a written report that ranks each risk and says what to fix first. When a regulator or your board asks, you will have an answer.</p>
       <div class="hero-actions">
-        <a href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry" class="btn btn-primary">Ask about an assessment</a>
+        <a href="mailto:daniel@dandollc.com?subject=20-minute%20call&body=Hi%20Daniel%2C%0A%0AI%27d%20like%20a%2020-minute%20call%20about%20an%20AI%20governance%20assessment.%20Times%20that%20work%20for%20me%3A%0A%0A" class="btn btn-primary" data-book>Book a 20-minute call</a>
         <a href="#services" class="btn btn-secondary">See what it covers</a>
       </div>
       <p class="hero-note">Led by <a href="#about">an attorney</a> admitted in the District of Columbia and Maryland, with 15+ years in financial services compliance.</p>
@@ -431,6 +466,10 @@
           <span class="list-label">What you receive</span>
           <p>A written report that ranks each problem by risk and says what to fix first. A board member can follow it.</p>
         </div>
+        <figure class="figure">
+          <a href="sample-report.jpg" target="_blank" rel="noopener"><img src="sample-report.jpg" width="1200" height="1553" loading="lazy" alt="Sample first page of an assessment report for a fictional insurer: a board summary, four risks ranked high to low with a fix for each, a sample test result, and a 90-day list."></a>
+          <figcaption>Illustrative first page of the report. The insurer and its figures are invented; the format is what a client receives. Every finding names a fix.</figcaption>
+        </figure>
         <a class="btn btn-primary" href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Ask about an assessment</a>
       </div>
       <div>
@@ -493,35 +532,11 @@
       <span class="eyebrow">Approach</span>
       <h2 id="approach-title">How an assessment runs</h2>
     </div>
-    <ol class="steps">
-      <li class="step">
-        <span class="step-num" aria-hidden="true">1</span>
-        <div>
-          <h3>A short call</h3>
-          <p>You tell me where your team uses AI and what is at stake.</p>
-        </div>
-      </li>
-      <li class="step">
-        <span class="step-num" aria-hidden="true">2</span>
-        <div>
-          <h3>Review</h3>
-          <p>I look at your AI tools and policies, then at how reviews really happen.</p>
-        </div>
-      </li>
-      <li class="step">
-        <span class="step-num" aria-hidden="true">3</span>
-        <div>
-          <h3>Written report</h3>
-          <p>The report ranks each problem by risk and says what to fix first.</p>
-        </div>
-      </li>
-      <li class="step">
-        <span class="step-num" aria-hidden="true">4</span>
-        <div>
-          <h3>Follow-through</h3>
-          <p>If you want help making the fixes, the work can continue as advisory.</p>
-        </div>
-      </li>
+    <ol class="flow" aria-label="The four steps">
+      <li><span class="fn" aria-hidden="true">1</span><div><h3>A short call</h3><p>You tell me where your team uses AI and what is at stake.</p><span class="out">30 minutes</span></div></li>
+      <li><span class="fn" aria-hidden="true">2</span><div><h3>Review</h3><p>I look at your AI tools and policies, then at how reviews really happen, and test a sample of the AI&rsquo;s work.</p><span class="out">On site or remote</span></div></li>
+      <li><span class="fn" aria-hidden="true">3</span><div><h3>Written report</h3><p>The report ranks each problem by risk and says what to fix first.</p><span class="out">Board-ready</span></div></li>
+      <li><span class="fn" aria-hidden="true">4</span><div><h3>Follow-through</h3><p>If you want help making the fixes, the work can continue as advisory.</p><span class="out">Optional</span></div></li>
     </ol>
   </div>
 </section>
@@ -536,7 +551,17 @@
       <p>AI can write a draft or score a risk in seconds. A person still has to review it, often with less time than before. So the review shrinks to a quick look. If the answer looks right, it goes out.</p>
       <p>More rules rarely fix this. Many add steps without making the review any better.</p>
       <p>Enterprise AI platforms keep a log of each question and answer. The log doesn&rsquo;t show whether anyone reviewed the answer against the source.</p>
-      <p>A review works when the reviewer could actually catch a mistake. It also needs a record that shows it happened.</p>
+      <p>A review works when the reviewer could actually catch a mistake. It also needs a record that shows it happened. This is what that record looks like:</p>
+      <table class="log">
+        <caption>Sign-off log, illustrative excerpt. Names and files are invented.</caption>
+        <thead><tr><th scope="col">File</th><th scope="col">AI output</th><th scope="col">Reviewer</th><th scope="col">Checked against</th><th scope="col">Result</th></tr></thead>
+        <tbody>
+          <tr><td>CL-2041</td><td>Record summary</td><td>R. Alvarez</td><td>Medical record, 38 pp.</td><td class="ok">Accurate</td></tr>
+          <tr><td>CL-2042</td><td>Record summary</td><td>R. Alvarez</td><td>Medical record, 12 pp.</td><td class="fix">Prior injury omitted. Corrected.</td></tr>
+          <tr><td>UW-0877</td><td>Declination letter</td><td>M. Chen</td><td>Underwriting file</td><td class="ok">Accurate</td></tr>
+        </tbody>
+      </table>
+      <p class="log-note">One line per review: who looked, what they compared it with, and what they found. When an examiner asks, this is the answer.</p>
       <p class="thesis-link"><a href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Read the research: Coherence Under Acceleration &rarr;</a></p>
     </div>
   </div>
@@ -549,6 +574,13 @@
       <h2 id="research-title">The research behind the work</h2>
       <p>The advice draws on my published research about how AI changes professional judgment and how to test AI on legal work. The papers are posted on the Social Science Research Network (SSRN) and arXiv.</p>
     </div>
+    <div class="latest-wrap"><span class="list-label">Latest</span>
+      <ul class="latest" aria-label="Latest">
+        <li><time datetime="2026-10-07">Oct 7, 2026</time><span><a href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Coherence Under Acceleration</a> revised on SSRN.</span></li>
+        <li><time datetime="2026-08">Aug 2026</time><span>InsufficiencyBench receives a Best Paper Honorable Mention at the AI for Law Workshop, ICML 2026.</span></li>
+      </ul>
+    </div>
+
     <div class="papers">
       <div class="paper">
         <span class="paper-meta">SSRN 5960914 &middot; revised October 2026</span>
@@ -612,7 +644,9 @@
   <div class="wrap">
     <div class="contact-inner">
       <span class="eyebrow">Contact</span>
-      <h2 id="contact-title">Ask about an assessment, or invite me to speak.</h2>
+      <h2 id="contact-title">Start with a 20-minute call.</h2>
+      <p class="contact-lead">No charge. You describe where your team uses AI; I say whether an assessment would help and what it would cover.</p>
+      <p><a href="mailto:daniel@dandollc.com?subject=20-minute%20call&body=Hi%20Daniel%2C%0A%0AI%27d%20like%20a%2020-minute%20call%20about%20an%20AI%20governance%20assessment.%20Times%20that%20work%20for%20me%3A%0A%0A" class="btn btn-primary" data-book>Book a 20-minute call</a></p>
       <a href="mailto:daniel@dandollc.com" class="contact-email">daniel@dandollc.com</a>
       <ul class="topics" aria-label="Email about a specific topic">
         <li><a href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Assessment</a></li>
