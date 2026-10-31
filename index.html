@@ -527,27 +527,27 @@
         <div class="offer-receive">
           <span class="list-label">What you receive</span>
           <p>A written report, plain enough for a board member, that ranks each problem by risk and says what to fix first. I quote the fee after the 30-minute call, once the scope is clear.</p>
-          <p>For law firms and legal teams, I sign a confidentiality agreement before seeing any client files, work on a sample you choose, and return or delete files when the engagement ends.</p>
+          <p>For law firms and legal teams, I sign a confidentiality agreement before seeing any client files and work on a sample you choose. When the engagement ends, I return or delete files as our agreement provides, subject to any legal hold.</p>
         </div>
         <figure class="figure">
           <span class="example-tag">Example</span>
           <a href="sample-report.jpg" target="_blank" rel="noopener"><img src="sample-report.jpg" width="1200" height="1553" loading="lazy" alt="Sample first page of an assessment report for a fictional insurer: a board summary, four risks ranked high to low with a fix for each, a sample test result, and a 90-day list."></a>
-          <figcaption>First page of an example report. The insurer and its figures are invented. The format is what a client receives.</figcaption>
+          <figcaption>First page of an example report. The insurer and its figures are invented. Format and length vary by engagement.</figcaption>
         </figure>
         <details class="report-text">
           <summary>Read the example report as text</summary>
           <p><strong>AI governance assessment.</strong> Prepared for the General Counsel, Harborline Mutual Insurance Company. Illustrative example. The company and its figures are invented.</p>
-          <p><strong>Summary for the board.</strong> Four AI uses were found. Two of them touch policyholder data. One has no human review that could catch a mistake.</p>
+          <p><strong>Summary for the board.</strong> Four AI uses were found. Three of them touch policyholder data. One has no human review that could catch a mistake.</p>
           <p><strong>What was found.</strong> Claims staff use an AI tool to summarize medical records on 60 percent of injury claims. The summaries are accepted without a check against the records in 9 of the 20 files sampled. Underwriting uses a second tool to draft declination letters; every letter is read by an underwriter before it goes out. Two further tools are used by individual staff without approval.</p>
           <p><strong>Risks, ranked.</strong></p>
           <ul>
             <li>High. Claims summaries go unreviewed. In the sample, the tool omitted a prior-injury note on 2 of 20 files. Fix first: name one reviewer per claim, and compare the summary with the record before it is relied on.</li>
-            <li>Medium. Two unapproved tools hold customer names and policy numbers outside the company&rsquo;s systems. Fix first: stop use until each tool is approved and the data is removed.</li>
-            <li>Medium. No written AI program. The NAIC Model Bulletin describes one; a use policy is one part of it. Fix first: adopt a one-page policy now, then build out the full program. Ask counsel about state rules.</li>
-            <li>Low. Declination letters are drafted by AI and read by an underwriter. The review works, but it leaves no record. Fix first: add a sign-off line to the letter file.</li>
+            <li>Medium. Two unapproved tools hold customer names and policy numbers outside the company&rsquo;s systems. Fix first: stop use. Keep a record of the data involved, then remove it once counsel checks incident duties.</li>
+            <li>Medium. No written AI program. The NAIC Model Bulletin describes one; a use policy is one part of it. Fix first: adopt a one-page policy by day 60, then build out the full program. Ask counsel about state rules.</li>
+            <li>Low. Declination letters are drafted by AI and read by an underwriter. Nothing records the check or what it found. Fix first: add a sign-off line to the letter file.</li>
           </ul>
-          <p><strong>Sample test.</strong> 20 claims summaries were graded against their source records using the REASON method. 17 were accurate, 2 omitted a material fact and 1 misstated a date. Error rate in the sample: 15 percent.</p>
-          <p><strong>What to do in the next 90 days.</strong> Assign reviewers for claims summaries and start the sign-off log (week 1). Remove customer data from the two unapproved tools (week 2). Adopt the AI policy and brief the board (by day 60). Re-test a new sample of 20 files (day 90).</p>
+          <p><strong>Sample test.</strong> 20 claims summaries were graded against their source records using REASON, a legal-reasoning rubric adapted for this test. 17 were accurate. 2 omitted a material fact. 1 misstated a date. Error rate in the sample: 15 percent.</p>
+          <p><strong>What to do in the next 90 days.</strong> Assign reviewers for claims summaries and start the sign-off log (week 1). Record what customer data is in the two unapproved tools, then remove it once counsel checks incident duties (week 2). Adopt the one-page AI policy and brief the board (by day 60). Re-test a new sample of 20 files (day 90).</p>
         </details>
         <a class="btn btn-primary" href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Ask about an assessment</a>
       </div>
@@ -629,7 +629,7 @@
           <p class="quote">The Customer may terminate this Agreement on ninety (90) days&rsquo; written notice, <mark>provided that no such notice may be given before the second anniversary of the Effective Date</mark>.</p>
         </div>
       </div>
-      <p class="exhibit-result"><strong>Missed:</strong> the summary drops the two-year lock-in, and the reviewer approved it without checking clause 14.2.</p>
+      <p class="exhibit-result"><strong>Missed:</strong> the customer can&rsquo;t give notice until the second anniversary, so the agreement runs at least two years and 90 days. The summary drops this, and the reviewer approved it without checking clause 14.2.</p>
       <figcaption>The contract and the review are invented for illustration.</figcaption>
     </figure>
   </div>
@@ -643,9 +643,9 @@
     </div>
     <div class="thesis-body">
       <p>AI can write a draft or score a risk in seconds. A person still has to review it, often with less time than before. So the review shrinks to a quick look. If the answer looks right, it goes out.</p>
-      <p>More rules rarely fix this, because most add steps without improving the review.</p>
-      <p>Enterprise AI platforms keep a log of each question and answer. The log doesn&rsquo;t show whether anyone reviewed the answer against the source.</p>
-      <p>Most everyday AI use needs only simple rules: which tools are approved, and what data stays out. A few decisions need more, the ones where AI output reaches a customer, a regulator or a legal position. Those need a reviewer who could actually catch a mistake, and a record that shows the review happened. This is what that record looks like:</p>
+      <p>Adding rules doesn&rsquo;t fix this on its own, because a rule can add steps without improving the review.</p>
+      <p>Many enterprise AI platforms can keep a log of questions and answers. A log like that doesn&rsquo;t show whether anyone reviewed the answer against the source.</p>
+      <p>For much everyday AI use, simple rules cover the main risks: which tools are approved, and what data stays out. Some decisions need more, the ones where AI output reaches a customer, a regulator or a legal position. Those need a reviewer who could actually catch a mistake, and a record that shows the review happened. This is what that record looks like:</p>
       <table class="log">
         <caption><span class="example-tag">Example</span>Sign-off log excerpt. Names and files are invented.</caption>
         <thead><tr><th scope="col">File</th><th scope="col">AI output</th><th scope="col">Reviewer</th><th scope="col">Checked against</th><th scope="col">Result</th></tr></thead>
@@ -734,7 +734,7 @@
       <h2 id="contact-title">Start with a 30-minute call.</h2>
       <p class="contact-lead">The call is free. Tell me where your team uses AI, and I&rsquo;ll tell you whether an assessment would help and what it would cover. If it fits, I quote the fee after the call.</p>
       <p><a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Tv8VllMrl5kL9UvSXAp3iEmmsTnsm45xSdXyyjG5At5GldBkTYADpoZZcaoclMWQwm9wZTdU8" target="_blank" rel="noopener" class="btn btn-primary" data-book>Book a 30-minute call</a></p>
-      <p class="contact-note">Booking runs through Google Calendar. Your name and email go to Google and to DANDO and are used only to schedule, prepare for and follow up on the call. Google&rsquo;s privacy policy also applies on its booking page.</p>
+      <p class="contact-note">Booking runs through Google Calendar. Your name and email go to Google and to DANDO, and DANDO uses them to schedule, prepare for and follow up on the call. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google&rsquo;s privacy policy</a> applies on its booking page. See the <a href="privacy.html">privacy notice</a>.</p>
       <a href="mailto:daniel@dandollc.com" class="contact-email">daniel@dandollc.com</a>
       <ul class="topics" aria-label="Email about a specific topic">
         <li><a href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Assessment</a></li>
@@ -783,7 +783,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 DANDO LLC. DANDO and the DANDO logo are trademarks of DANDO LLC.</p>
-      <p>DANDO provides AI governance consulting, training and research. It is not a law firm and does not provide legal advice or legal services. Contacting or engaging DANDO does not create an attorney-client relationship, and the protections of that relationship do not apply to DANDO&rsquo;s work. Confidentiality is covered by your agreement with DANDO. Do not assume communications with DANDO or its reports are privileged. If your lawyer engages DANDO to help give you legal advice, whether privilege applies depends on how the engagement is set up, and DANDO does not promise it.</p>
+      <p>DANDO provides AI governance consulting, training and research. It is not a law firm and does not provide legal advice or legal services. Contacting or engaging DANDO for these services does not create an attorney-client relationship. Do not assume communications with DANDO or its reports are privileged; which protections apply depends on the circumstances and the governing law. Confidentiality is covered by your agreement with DANDO. If your lawyer engages DANDO to help give legal advice, DANDO does not promise that privilege will apply.</p>
       <p>Daniel D. Calloway&nbsp;III is responsible for this site&rsquo;s content. He is admitted to practice law only in the District of Columbia and Maryland and is not admitted in North Carolina or any other state.</p>
       <p><a href="privacy.html">Privacy</a> &middot; <a href="accessibility.html">Accessibility</a></p>
     </div>
