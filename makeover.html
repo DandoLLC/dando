@@ -106,6 +106,8 @@
   .logo-dark { display: none !important; }
   :root[data-theme="dark"] .logo-light { display: none !important; }
   :root[data-theme="dark"] .logo-dark { display: block !important; }
+  /* Dark theme: long-flare mark. The D matches the light mark's size; the glow overflows without moving the layout. */
+  :root[data-theme="dark"] .brand img.logo-dark { height: 32.5px; margin: -3.25px -8.1px -3.25px 0; }
 
   .nav { display: flex; align-items: center; gap: 1.5rem; }
   .nav a { font-size: 0.9375rem; color: var(--muted); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
@@ -302,6 +304,7 @@
   .site-footer { border-top: 1px solid var(--line); background: var(--surface); padding-block: 3rem calc(2rem + env(safe-area-inset-bottom, 0px)); }
   .footer-grid { display: grid; gap: 2rem; }
   .footer-brand img { height: 32px; width: auto; }
+  :root[data-theme="dark"] .footer-brand img.logo-dark { height: 40px; margin: -4px 0; }
   .footer-brand p { margin-top: 0.75rem; font-weight: 700; letter-spacing: 0.08em; }
   .footer-brand .tag { font-weight: 400; letter-spacing: 0; color: var(--muted); font-size: 0.9375rem; margin-top: 0.25rem; }
   .site-footer h2 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
@@ -349,7 +352,7 @@
   <div class="wrap header-inner">
     <a class="brand" href="./" aria-label="DANDO LLC home">
       <img class="logo-light" src="dando-mark-nostar-on-light.png" width="177" height="192" alt="" aria-hidden="true">
-      <img class="logo-dark" src="dando-mark-nostar-on-dark.png" width="177" height="192" alt="" aria-hidden="true">
+      <img class="logo-dark" src="dando-mark-flare-on-dark.png" width="158" height="160" alt="" aria-hidden="true">
       <span class="brand-name">DANDO <span>LLC</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Sections">
@@ -462,7 +465,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img class="logo-light" src="dando-mark-nostar-on-light.png" width="177" height="192" alt="" aria-hidden="true">
-        <img class="logo-dark" src="dando-mark-nostar-on-dark.png" width="177" height="192" alt="" aria-hidden="true">
+        <img class="logo-dark" src="dando-mark-flare-on-dark.png" width="158" height="160" alt="" aria-hidden="true">
         <p>DANDO LLC</p>
         <p class="tag">AI governance advisory and research</p>
       </div>
