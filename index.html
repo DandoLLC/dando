@@ -12,14 +12,14 @@
 <meta property="og:title" content="DANDO LLC: AI governance for law firms and general counsel">
 <meta property="og:description" content="An attorney-led AI governance assessment: where your team uses AI, whether reviewers catch its mistakes, and a board-ready report with a ranked fix list.">
 <meta property="og:url" content="https://dandollc.com/">
-<meta property="og:image" content="https://dandollc.com/social-card-2026-10-30.jpg">
+<meta property="og:image" content="https://dandollc.com/social-card-2026-10-31.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DANDO LLC: AI governance for law firms and general counsel">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DANDO LLC: AI governance for law firms and general counsel">
 <meta name="twitter:description" content="An attorney-led AI governance assessment: where your team uses AI, whether reviewers catch its mistakes, and a board-ready report with a ranked fix list.">
-<meta name="twitter:image" content="https://dandollc.com/social-card-2026-10-30.jpg">
+<meta name="twitter:image" content="https://dandollc.com/social-card-2026-10-31.jpg">
 <link rel="icon" type="image/png" href="dando-mark-nostar.png">
 <style>
   /* Layout: one 72rem column. Palette follows the DANDO mark: ink and warm gray on a paper ground, gold as the accent. */
@@ -105,6 +105,11 @@
   .logo-dark { display: none !important; }
   :root[data-theme="dark"] .logo-light { display: none !important; }
   :root[data-theme="dark"] .logo-dark { display: block !important; }
+  /* Light theme: light-background flare mark, sized like the dark one so the wordmark stays put. */
+  .brand img.logo-light { height: 32.5px; margin: -3.25px -8.4px -3.25px 0; }
+  .footer-brand img.logo-light { height: 40px; margin: -4px 0; }
+  /* Dark theme: long-flare mark. The D matches the light mark's size; the glow overflows without moving the layout. */
+  :root[data-theme="dark"] .brand img.logo-dark { height: 32.5px; margin: -3.25px -9.6px -3.25px 0; }
 
   .nav { display: flex; align-items: center; gap: 1.5rem; }
   .nav a { font-size: 0.9375rem; color: var(--muted); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
@@ -279,6 +284,14 @@
   .figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.06); }
   .figure figcaption { margin-top: 0.6rem; font-size: 0.875rem; color: var(--muted); }
   .figure a { color: inherit; }
+  .offer-receive p + p { margin-top: 0.6rem; }
+  .report-text { margin: 0.75rem 0 1.25rem; font-size: 0.875rem; color: var(--muted); }
+  .report-text summary { cursor: pointer; color: var(--fg); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  .report-text p, .report-text ul { margin-top: 0.6rem; }
+  .report-text ul { list-style: disc; padding-left: 1.2rem; }
+  .report-text li { padding: 0; border: 0; font-size: inherit; }
+  .report-text li::before { content: none; }
+  .report-text strong { color: var(--fg); font-weight: 600; }
   .flow { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; counter-reset: s; }
   .flow li { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 1rem; align-items: start; align-content: start; }
   .flow li > div { padding-top: 0.9rem; }
@@ -352,6 +365,7 @@
   .site-footer { border-top: 1px solid var(--line); background: var(--surface); padding-block: 3rem calc(2rem + env(safe-area-inset-bottom, 0px)); }
   .footer-grid { display: grid; gap: 2rem; }
   .footer-brand img { height: 32px; width: auto; }
+  :root[data-theme="dark"] .footer-brand img.logo-dark { height: 40px; margin: -4px 0; }
   .footer-brand p { margin-top: 0.75rem; font-weight: 700; letter-spacing: 0.08em; }
   .footer-brand .tag { font-weight: 400; letter-spacing: 0; color: var(--muted); font-size: 0.9375rem; margin-top: 0.25rem; }
   .site-footer h2 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
@@ -396,7 +410,7 @@
   "@type": "Organization",
   "name": "DANDO LLC",
   "url": "https://dandollc.com/",
-  "logo": "https://dandollc.com/dando-mark-nostar-on-light.png",
+  "logo": "https://dandollc.com/dando-mark-flare-on-light.png",
   "email": "daniel@dandollc.com",
   "description": "AI governance assessments for law firms and general counsel.",
   "sameAs": [
@@ -423,8 +437,8 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="./" aria-label="DANDO LLC home">
-      <img class="logo-light" src="dando-mark-nostar-on-light.png" width="177" height="192" alt="" aria-hidden="true">
-      <img class="logo-dark" src="dando-mark-nostar-on-dark.png" width="177" height="192" alt="" aria-hidden="true">
+      <img class="logo-light" src="dando-mark-flare-on-light.png" width="159" height="160" alt="" aria-hidden="true">
+      <img class="logo-dark" src="dando-mark-flare-on-dark.png" width="165" height="160" alt="" aria-hidden="true">
       <span class="brand-name">DANDO <span>LLC</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Sections">
@@ -448,12 +462,12 @@
     <div class="hero-copy">
       <span class="eyebrow">DANDO LLC &middot; AI governance assessment</span>
       <h1 id="hero-title">AI governance for law firms and general counsel</h1>
-      <p class="hero-lede">I find where your team uses AI and check a sample of that work against the source files, to see whether your reviewers catch the mistakes. You get a written report that ranks what to fix first, and a record you can show a regulator, an examiner or your board.</p>
+      <p class="hero-lede">I find where your team uses AI and check a sample of that work against the source files, to see whether your reviewers catch the mistakes. You get a written report that ranks what to fix first, and a record of who reviewed what that you can share with a regulator, an examiner or your board.</p>
       <div class="hero-actions">
         <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Tv8VllMrl5kL9UvSXAp3iEmmsTnsm45xSdXyyjG5At5GldBkTYADpoZZcaoclMWQwm9wZTdU8" target="_blank" rel="noopener" class="btn btn-primary" data-book>Book a 30-minute call</a>
         <a href="#services" class="btn btn-secondary">See what it covers</a>
       </div>
-      <p class="hero-note">Led by <a href="#about">an attorney</a> admitted in the District of Columbia and Maryland, with legal, compliance and investigations work since 2012. I do every engagement myself.</p>
+      <p class="hero-note">Led by <a href="#about">an attorney</a> admitted in the District of Columbia and Maryland (not North Carolina), with legal, compliance and investigations work since 2012. I do every engagement myself.</p>
     </div>
 
     <aside class="principles-card" aria-labelledby="principles-title">
@@ -513,12 +527,28 @@
         <div class="offer-receive">
           <span class="list-label">What you receive</span>
           <p>A written report, plain enough for a board member, that ranks each problem by risk and says what to fix first. I quote the fee after the 30-minute call, once the scope is clear.</p>
+          <p>For law firms and legal teams, I sign a confidentiality agreement before seeing any client files and work on a sample you choose. When the engagement ends, I return or delete files as our agreement provides, subject to any legal hold.</p>
         </div>
         <figure class="figure">
           <span class="example-tag">Example</span>
           <a href="sample-report.jpg" target="_blank" rel="noopener"><img src="sample-report.jpg" width="1200" height="1553" loading="lazy" alt="Sample first page of an assessment report for a fictional insurer: a board summary, four risks ranked high to low with a fix for each, a sample test result, and a 90-day list."></a>
-          <figcaption>First page of an example report. The insurer and its figures are invented. The format is what a client receives.</figcaption>
+          <figcaption>First page of an example report. The insurer and its figures are invented. Format and length vary by engagement.</figcaption>
         </figure>
+        <details class="report-text">
+          <summary>Read the example report as text</summary>
+          <p><strong>AI governance assessment.</strong> Prepared for the General Counsel, Harborline Mutual Insurance Company. Illustrative example. The company and its figures are invented.</p>
+          <p><strong>Summary for the board.</strong> Four AI uses were found. Three of them touch policyholder data. One has no human review that could catch a mistake.</p>
+          <p><strong>What was found.</strong> Claims staff use an AI tool to summarize medical records on 60 percent of injury claims. The summaries are accepted without a check against the records in 9 of the 20 files sampled. Underwriting uses a second tool to draft declination letters; every letter is read by an underwriter before it goes out. Two further tools are used by individual staff without approval.</p>
+          <p><strong>Risks, ranked.</strong></p>
+          <ul>
+            <li>High. Claims summaries go unreviewed. In the sample, the tool omitted a prior-injury note on 2 of 20 files. Fix first: name one reviewer per claim, and compare the summary with the record before it is relied on.</li>
+            <li>Medium. Two unapproved tools hold customer names and policy numbers outside the company&rsquo;s systems. Fix first: stop use. Keep a record of the data involved, then remove it once counsel checks incident duties.</li>
+            <li>Medium. No written AI program. The NAIC Model Bulletin describes one; a use policy is one part of it. Fix first: adopt a one-page policy by day 60, then build out the full program. Ask counsel about state rules.</li>
+            <li>Low. Declination letters are drafted by AI and read by an underwriter. Nothing records the check or what it found. Fix first: add a sign-off line to the letter file.</li>
+          </ul>
+          <p><strong>Sample test.</strong> 20 claims summaries were graded against their source records using REASON, a legal-reasoning rubric adapted for this test. 17 were accurate. 2 omitted a material fact. 1 misstated a date. Error rate in the sample: 15 percent.</p>
+          <p><strong>What to do in the next 90 days.</strong> Assign reviewers for claims summaries and start the sign-off log (week 1). Record what customer data is in the two unapproved tools, then remove it once counsel checks incident duties (week 2). Adopt the one-page AI policy and brief the board (by day 60). Re-test a new sample of 20 files (day 90).</p>
+        </details>
         <a class="btn btn-primary" href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Ask about an assessment</a>
       </div>
       <div>
@@ -530,18 +560,18 @@
           <li>Who reviews each tool&rsquo;s work, and whether they could catch a mistake</li>
           <li>A scored sample of the AI&rsquo;s work, using a method from my published research</li>
           <li>Whether your outside law firms and vendors use AI on your work</li>
-          <li>How your practice compares with the rules and guidance below</li>
+          <li>How your team&rsquo;s AI review compares with published frameworks and guidance</li>
         </ul>
         <div class="frameworks-note">
           <p>The comparison uses:</p>
           <ul>
-            <li>The National Association of Insurance Commissioners (NAIC) Model Bulletin on the use of AI systems by insurers, as adopted in your state</li>
-            <li>American Bar Association Formal Opinion 512, on lawyers&rsquo; use of AI tools</li>
             <li>The National Institute of Standards and Technology (NIST) AI Risk Management Framework</li>
-            <li>Federal Trade Commission guidance on AI</li>
-            <li>The European Union AI Act</li>
+            <li>The National Association of Insurance Commissioners (NAIC) Model Bulletin on the use of AI systems by insurers (the model text, not any state&rsquo;s version)</li>
+            <li>American Bar Association Formal Opinion 512, on lawyers&rsquo; use of AI tools</li>
+            <li>Federal Trade Commission business guidance on AI</li>
+            <li>The European Union AI Act, as a reference point for governance practice</li>
           </ul>
-          <p>The comparison is not a legal opinion.</p>
+          <p>The comparison shows how your team&rsquo;s review of AI work lines up with these frameworks and where your process has gaps. It is not a legal opinion and does not say whether you comply with any law or regulation. Questions of legal compliance, including how any state or foreign law applies to you, are for your legal counsel, and I can work with your counsel on them.</p>
         </div>
       </div>
     </article>
@@ -552,7 +582,7 @@
         <h3>Advisory</h3>
         <p class="offer-desc">Help after the assessment, as your team adds AI tools and new uses.</p>
         <ul>
-          <li>Writing your AI use policy and putting it into practice</li>
+          <li>Drafting your team&rsquo;s AI use policy as an operating document, for your counsel to review where it touches legal obligations</li>
           <li>Deciding which AI work needs a named reviewer</li>
           <li>Regular reviews of your AI tools and vendors</li>
           <li>Briefings on AI risk for your board and leaders</li>
@@ -599,7 +629,7 @@
           <p class="quote">The Customer may terminate this Agreement on ninety (90) days&rsquo; written notice, <mark>provided that no such notice may be given before the second anniversary of the Effective Date</mark>.</p>
         </div>
       </div>
-      <p class="exhibit-result"><strong>Missed:</strong> the summary drops the two-year lock-in, and the reviewer approved it without checking clause 14.2.</p>
+      <p class="exhibit-result"><strong>Missed:</strong> the customer can&rsquo;t give notice until the second anniversary, so the agreement runs at least two years and 90 days. The summary drops this, and the reviewer approved it without checking clause 14.2.</p>
       <figcaption>The contract and the review are invented for illustration.</figcaption>
     </figure>
   </div>
@@ -613,9 +643,9 @@
     </div>
     <div class="thesis-body">
       <p>AI can write a draft or score a risk in seconds. A person still has to review it, often with less time than before. So the review shrinks to a quick look. If the answer looks right, it goes out.</p>
-      <p>More rules rarely fix this, because most add steps without improving the review.</p>
-      <p>Enterprise AI platforms keep a log of each question and answer. The log doesn&rsquo;t show whether anyone reviewed the answer against the source.</p>
-      <p>Most everyday AI use needs only simple rules: which tools are approved, and what data stays out. A few decisions need more, the ones where AI output reaches a customer, a regulator or a legal position. Those need a reviewer who could actually catch a mistake, and a record that shows the review happened. This is what that record looks like:</p>
+      <p>Adding rules doesn&rsquo;t fix this on its own, because a rule can add steps without improving the review.</p>
+      <p>Many enterprise AI platforms can keep a log of questions and answers. A log like that doesn&rsquo;t show whether anyone reviewed the answer against the source.</p>
+      <p>For much everyday AI use, simple rules about which tools are approved and what data stays out can address some routine risks. Other decisions need more, the ones where AI output reaches a customer, a regulator or a legal position. Those need a reviewer who could actually catch a mistake, and a record that shows the review happened. This is what that record looks like:</p>
       <table class="log">
         <caption><span class="example-tag">Example</span>Sign-off log excerpt. Names and files are invented.</caption>
         <thead><tr><th scope="col">File</th><th scope="col">AI output</th><th scope="col">Reviewer</th><th scope="col">Checked against</th><th scope="col">Result</th></tr></thead>
@@ -677,7 +707,7 @@
     </div>
     <div class="about-layout">
       <div class="about-text">
-        <p class="about-bio">I founded DANDO and do every engagement myself. I&rsquo;m a regulatory attorney who came to AI from compliance work. Since 2012 I have worked across anti-money laundering rules, healthcare privacy, private equity compliance and large-firm practice. I also test AI models on legal tasks for the companies that build them.</p>
+        <p class="about-bio">I founded DANDO and do every engagement myself. I&rsquo;m an attorney who came to AI from regulatory compliance work. I started my career in healthcare advocacy. Since 2012 I have worked across anti-money laundering rules, private equity compliance and contract work for large law firms. I also test AI models on legal tasks for the companies that build them.</p>
         <p class="about-more"><span class="list-label">Education</span>Juris Doctor, University of Connecticut School of Law. Bachelor of Arts in Criminology and Criminal Justice, University of Maryland, College Park.</p>
       </div>
       <aside class="profile" aria-labelledby="profile-name">
@@ -704,6 +734,7 @@
       <h2 id="contact-title">Start with a 30-minute call.</h2>
       <p class="contact-lead">The call is free. Tell me where your team uses AI, and I&rsquo;ll tell you whether an assessment would help and what it would cover. If it fits, I quote the fee after the call.</p>
       <p><a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Tv8VllMrl5kL9UvSXAp3iEmmsTnsm45xSdXyyjG5At5GldBkTYADpoZZcaoclMWQwm9wZTdU8" target="_blank" rel="noopener" class="btn btn-primary" data-book>Book a 30-minute call</a></p>
+      <p class="contact-note">Booking runs through Google Calendar. Your name and email go to Google and to DANDO, and DANDO uses them to schedule, prepare for and follow up on the call. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google&rsquo;s privacy policy</a> applies on its booking page. See the <a href="privacy.html">privacy notice</a>.</p>
       <a href="mailto:daniel@dandollc.com" class="contact-email">daniel@dandollc.com</a>
       <ul class="topics" aria-label="Email about a specific topic">
         <li><a href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Assessment</a></li>
@@ -722,8 +753,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img class="logo-light" src="dando-mark-nostar-on-light.png" width="177" height="192" alt="" aria-hidden="true">
-        <img class="logo-dark" src="dando-mark-nostar-on-dark.png" width="177" height="192" alt="" aria-hidden="true">
+        <img class="logo-light" src="dando-mark-flare-on-light.png" width="159" height="160" alt="" aria-hidden="true">
+        <img class="logo-dark" src="dando-mark-flare-on-dark.png" width="165" height="160" alt="" aria-hidden="true">
         <p>DANDO LLC</p>
         <p class="tag">AI governance for law firms and general counsel</p>
       </div>
@@ -751,9 +782,10 @@
       </nav>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 DANDO LLC. The name and logo are trademarks of the company.</p>
-      <p>DANDO LLC is an advisory and research company and does not provide legal services. Contacting or engaging the company does not create an attorney-client relationship.</p>
-      <p>Daniel D. Calloway&nbsp;III, attorney admitted in the District of Columbia and Maryland, is responsible for this page's content.</p>
+      <p>&copy; 2026 DANDO LLC. DANDO and the DANDO logo are trademarks of DANDO LLC.</p>
+      <p>DANDO provides AI governance consulting, training and research. It is not a law firm and does not provide legal advice or legal services. Contacting or engaging DANDO for these services does not create an attorney-client relationship. Do not assume communications with DANDO or its reports are privileged; which protections apply depends on the circumstances and the governing law. Confidentiality is covered by your agreement with DANDO. If your lawyer engages DANDO to help give legal advice, DANDO does not promise that privilege will apply.</p>
+      <p>Daniel D. Calloway&nbsp;III is responsible for this site&rsquo;s content. He is admitted to practice law only in the District of Columbia and Maryland and is not admitted in North Carolina or any other state.</p>
+      <p><a href="privacy.html">Privacy</a> &middot; <a href="accessibility.html">Accessibility</a></p>
     </div>
   </div>
 </footer>
