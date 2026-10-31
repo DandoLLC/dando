@@ -303,6 +303,22 @@
   .log .ok { color: #1A6B3A; font-weight: 600; } .log .fix { color: #9B2C1F; font-weight: 600; }
   :root[data-theme="dark"] .log .ok { color: #7ED39B; } :root[data-theme="dark"] .log .fix { color: #F08A7A; }
   .log-note { font-size: 0.875rem; color: var(--muted); margin-top: 0.6rem; }
+  .exhibit { margin: 2.75rem 0 0; max-width: 58rem; }
+  .exhibit-label { margin: 0 0 0.75rem; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .exhibit-pair { display: grid; gap: 1rem; }
+  .exhibit-card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1.1rem 1.25rem 1.2rem; }
+  .exhibit-card.source { border-left: 3px solid var(--gold); }
+  .exhibit-card-label { margin: 0 0 0.55rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  .exhibit-card .quote { margin: 0; font-size: 1.0625rem; line-height: 1.55; }
+  .exhibit-card.source .quote { font-family: Georgia, "Times New Roman", serif; }
+  .exhibit mark { background: rgba(193, 154, 69, 0.28); color: inherit; padding: 0 0.12em; border-radius: 2px; }
+  .exhibit .miss { text-decoration: underline wavy #9B2C1F; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+  .exhibit-result { margin: 0.9rem 0 0; }
+  .exhibit-result strong { color: #9B2C1F; }
+  .exhibit figcaption { margin-top: 0.5rem; font-size: 0.875rem; color: var(--muted); }
+  :root[data-theme="dark"] .exhibit .miss { text-decoration-color: #F08A7A; }
+  :root[data-theme="dark"] .exhibit-result strong { color: #F08A7A; }
+  @media (min-width: 760px) { .exhibit-pair { grid-template-columns: 1fr 1fr; } }
   .contact-lead { max-width: 40rem; margin: 0; color: var(--muted); }
   .about-bio { font-size: 1.0625rem; color: var(--fg); }
   .about-more { font-size: 1rem; color: var(--muted); }
@@ -565,6 +581,21 @@
       <li><span class="fn" aria-hidden="true">3</span><div><h3>Written report</h3><p>The report ranks each problem by risk and says what to fix first.</p><span class="out">Board-ready</span></div></li>
       <li><span class="fn" aria-hidden="true">4</span><div><h3>Follow-through</h3><p>If you want help making the fixes, the work can continue as advisory.</p><span class="out">Optional</span></div></li>
     </ol>
+    <figure class="exhibit">
+      <p class="exhibit-label">What step 2 can turn up</p>
+      <div class="exhibit-pair">
+        <div class="exhibit-card">
+          <p class="exhibit-card-label">AI summary, approved by a reviewer</p>
+          <p class="quote">The customer can end the agreement <span class="miss">at any time</span> on 90 days&rsquo; notice.</p>
+        </div>
+        <div class="exhibit-card source">
+          <p class="exhibit-card-label">The contract, clause 14.2</p>
+          <p class="quote">The Customer may terminate this Agreement on ninety (90) days&rsquo; written notice, <mark>provided that no such notice may be given before the second anniversary of the Effective Date</mark>.</p>
+        </div>
+      </div>
+      <p class="exhibit-result"><strong>Missed:</strong> the summary drops the two-year lock-in, and the reviewer approved it without checking clause 14.2.</p>
+      <figcaption>Illustrative example. The contract and the review are invented.</figcaption>
+    </figure>
   </div>
 </section>
 
