@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DANDO LLC | AI governance advisory and research</title>
-<meta name="description" content="AI governance advisory and research for general counsel and chief compliance officers in regulated industries. Led by an attorney admitted in the District of Columbia and Maryland.">
+<title>DANDO LLC | AI governance for law firms and general counsel</title>
+<meta name="description" content="An attorney-led AI governance assessment for law firms and general counsel: where your team uses AI, whether reviewers catch its mistakes, and a board-ready report with a ranked fix list. Led by an attorney admitted in the District of Columbia and Maryland.">
 <link rel="canonical" href="https://dandollc.com/">
 <meta name="theme-color" content="#F4F0E8">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DANDO LLC">
-<meta property="og:title" content="DANDO LLC: Know where your team uses AI, and whether anyone catches its mistakes">
-<meta property="og:description" content="An AI governance assessment for general counsel and chief compliance officers. You get a written report that ranks each risk and says what to fix first.">
+<meta property="og:title" content="DANDO LLC: AI governance for law firms and general counsel">
+<meta property="og:description" content="An attorney-led AI governance assessment: where your team uses AI, whether reviewers catch its mistakes, and a board-ready report with a ranked fix list.">
 <meta property="og:url" content="https://dandollc.com/">
-<meta property="og:image" content="https://dandollc.com/social-card-light.jpg">
+<meta property="og:image" content="https://dandollc.com/social-card-2026-10-30.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="DANDO LLC: Know where your team uses AI, and whether anyone catches its mistakes">
+<meta property="og:image:alt" content="DANDO LLC: AI governance for law firms and general counsel">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DANDO LLC: Know where your team uses AI, and whether anyone catches its mistakes">
-<meta name="twitter:description" content="An AI governance assessment for general counsel and chief compliance officers. You get a written report that ranks each risk and says what to fix first.">
-<meta name="twitter:image" content="https://dandollc.com/social-card-light.jpg">
+<meta name="twitter:title" content="DANDO LLC: AI governance for law firms and general counsel">
+<meta name="twitter:description" content="An attorney-led AI governance assessment: where your team uses AI, whether reviewers catch its mistakes, and a board-ready report with a ranked fix list.">
+<meta name="twitter:image" content="https://dandollc.com/social-card-2026-10-30.jpg">
 <link rel="icon" type="image/png" href="dando-mark-nostar.png">
 <style>
   /* Layout: one 72rem column. Palette follows the DANDO mark: ink and warm gray on a paper ground, gold as the accent. */
@@ -99,7 +99,7 @@
   }
   .header-inner { display: flex; align-items: center; gap: 1rem; min-height: var(--header-h); }
   .brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; margin-right: auto; min-height: 44px; }
-  .brand img { height: 30px; width: auto; }
+  .brand img { height: 26px; width: auto; }
   .brand-name { font-size: 1.0625rem; font-weight: 700; letter-spacing: 0.08em; }
   .brand-name span { font-weight: 400; letter-spacing: 0.04em; color: var(--muted); }
   .logo-dark { display: none !important; }
@@ -234,6 +234,7 @@
   }
   .offer h3 { font-size: 1.375rem; font-weight: 650; }
   .offer-type { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .offer h3.offer-type { font-size: 0.8125rem; font-weight: 600; margin: 0; }
   .offer-desc { color: var(--muted); }
   .offer ul { flex: 1; display: grid; align-content: start; }
   .offer li, .offer-lead li { padding: 0.55rem 0 0.55rem 1.1rem; border-top: 1px solid var(--line); position: relative; font-size: 1rem; }
@@ -302,11 +303,27 @@
   .log .ok { color: #1A6B3A; font-weight: 600; } .log .fix { color: #9B2C1F; font-weight: 600; }
   :root[data-theme="dark"] .log .ok { color: #7ED39B; } :root[data-theme="dark"] .log .fix { color: #F08A7A; }
   .log-note { font-size: 0.875rem; color: var(--muted); margin-top: 0.6rem; }
-  .latest-wrap { margin: -0.5rem 0 2.25rem; max-width: 38rem; }
-  .latest { display: grid; gap: 0; margin: 0.25rem 0 0; padding: 0; list-style: none; }
-  .latest li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; padding: 0.6rem 0; border-top: 1px solid var(--line); }
-  .latest li:first-child { border-top: 0; }
-  .latest time { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); padding-top: 0.2rem; }
+  .example-tag { display: inline-block; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1; color: #614A16; background: rgba(193, 154, 69, 0.16); border: 1px solid var(--gold); border-radius: 999px; padding: 0.32rem 0.62rem 0.3rem; vertical-align: middle; white-space: nowrap; }
+  .figure .example-tag { margin-bottom: 0.65rem; }
+  .log caption .example-tag { margin-right: 0.55rem; }
+  .exhibit { margin: 2.75rem 0 0; max-width: 58rem; background: var(--band); border: 1px solid var(--line); border-radius: 8px; padding: 1.25rem; }
+  .exhibit-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem 0.7rem; margin: 0 0 0.95rem; }
+  .exhibit-label { margin: 0; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .exhibit-pair { display: grid; gap: 1rem; }
+  .exhibit-card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1.1rem 1.25rem 1.2rem; }
+  .exhibit-card.source { border-left: 3px solid var(--gold); }
+  .exhibit-card-label { margin: 0 0 0.55rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  .exhibit-card .quote { margin: 0; font-size: 1.0625rem; line-height: 1.55; }
+  .exhibit-card.source .quote { font-family: Georgia, "Times New Roman", serif; }
+  .exhibit mark { background: rgba(193, 154, 69, 0.28); color: inherit; padding: 0 0.12em; border-radius: 2px; }
+  .exhibit .miss { text-decoration: underline wavy #9B2C1F; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+  .exhibit-result { margin: 0.9rem 0 0; }
+  .exhibit-result strong { color: #9B2C1F; }
+  .exhibit figcaption { margin-top: 0.5rem; font-size: 0.875rem; color: var(--muted); }
+  :root[data-theme="dark"] .exhibit .miss { text-decoration-color: #F08A7A; }
+  :root[data-theme="dark"] .example-tag { color: var(--accent); }
+  :root[data-theme="dark"] .exhibit-result strong { color: #F08A7A; }
+  @media (min-width: 760px) { .exhibit-pair { grid-template-columns: 1fr 1fr; } .exhibit { padding: 1.5rem 1.75rem 1.4rem; } }
   .contact-lead { max-width: 40rem; margin: 0; color: var(--muted); }
   .about-bio { font-size: 1.0625rem; color: var(--fg); }
   .about-more { font-size: 1rem; color: var(--muted); }
@@ -334,7 +351,7 @@
   /* Footer */
   .site-footer { border-top: 1px solid var(--line); background: var(--surface); padding-block: 3rem calc(2rem + env(safe-area-inset-bottom, 0px)); }
   .footer-grid { display: grid; gap: 2rem; }
-  .footer-brand img { height: 36px; width: auto; }
+  .footer-brand img { height: 32px; width: auto; }
   .footer-brand p { margin-top: 0.75rem; font-weight: 700; letter-spacing: 0.08em; }
   .footer-brand .tag { font-weight: 400; letter-spacing: 0; color: var(--muted); font-size: 0.9375rem; margin-top: 0.25rem; }
   .site-footer h2 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
@@ -379,9 +396,12 @@
   "@type": "Organization",
   "name": "DANDO LLC",
   "url": "https://dandollc.com/",
-  "logo": "https://dandollc.com/dando-mark-on-light.png",
+  "logo": "https://dandollc.com/dando-mark-nostar-on-light.png",
   "email": "daniel@dandollc.com",
-  "description": "AI governance advisory and research for general counsel and chief compliance officers in regulated industries.",
+  "description": "AI governance assessments for law firms and general counsel.",
+  "sameAs": [
+    "https://www.linkedin.com/company/dando-llc/"
+  ],
   "founder": {
     "@type": "Person",
     "name": "Daniel D. Calloway III",
@@ -389,6 +409,7 @@
     "jobTitle": "Founder and Principal, DANDO LLC",
     "sameAs": [
       "https://www.linkedin.com/in/callowayesq/",
+      "https://x.com/callowayesq",
       "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7682344"
     ]
   }
@@ -402,8 +423,8 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="./" aria-label="DANDO LLC home">
-      <img class="logo-light" src="dando-mark-on-light.png" width="186" height="192" alt="" aria-hidden="true">
-      <img class="logo-dark" src="dando-mark-on-dark.png" width="186" height="192" alt="" aria-hidden="true">
+      <img class="logo-light" src="dando-mark-nostar-on-light.png" width="177" height="192" alt="" aria-hidden="true">
+      <img class="logo-dark" src="dando-mark-nostar-on-dark.png" width="177" height="192" alt="" aria-hidden="true">
       <span class="brand-name">DANDO <span>LLC</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Sections">
@@ -425,26 +446,53 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">AI governance for general counsel and chief compliance officers at insurers and banks</span>
-      <h1 id="hero-title">Know where your team uses AI, and whether anyone catches its mistakes.</h1>
-      <p class="hero-lede">An AI governance assessment answers both questions. You get a written report that ranks each risk and says what to fix first. When a regulator or your board asks, you will have an answer.</p>
+      <span class="eyebrow">DANDO LLC &middot; AI governance assessment</span>
+      <h1 id="hero-title">AI governance for law firms and general counsel</h1>
+      <p class="hero-lede">I find where your team uses AI and check a sample of that work against the source files, to see whether your reviewers catch the mistakes. You get a written report that ranks what to fix first, and a record you can show a regulator, an examiner or your board.</p>
       <div class="hero-actions">
-        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Tv8VllMrl5kL9UvSXAp3iEmmsTnsm45xSdXyyjG5At5GldBkTYADpoZZcaoclMWQwm9wZTdU8" target="_blank" rel="noopener" class="btn btn-primary" data-book>Book a 20-minute call</a>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Tv8VllMrl5kL9UvSXAp3iEmmsTnsm45xSdXyyjG5At5GldBkTYADpoZZcaoclMWQwm9wZTdU8" target="_blank" rel="noopener" class="btn btn-primary" data-book>Book a 30-minute call</a>
         <a href="#services" class="btn btn-secondary">See what it covers</a>
       </div>
-      <p class="hero-note">Led by <a href="#about">an attorney</a> admitted in the District of Columbia and Maryland, with 15+ years in financial services compliance.</p>
+      <p class="hero-note">Led by <a href="#about">an attorney</a> admitted in the District of Columbia and Maryland, with legal, compliance and investigations work since 2012. I do every engagement myself.</p>
     </div>
 
     <aside class="principles-card" aria-labelledby="principles-title">
       <h2 id="principles-title">How it works</h2>
-      <p class="principles-example">Say your loan or operations team uses an AI tool to process customer files.</p>
       <ol class="principles">
-        <li>I map where the tool touches regulated data, and find the few points where a wrong answer would reach a customer, a regulator or a legal position.</li>
-        <li>I test a sample of its output against the source files, using a published method, to measure the error rate and see whether the human review catches the mistakes.</li>
-        <li>I set up a sign-off log at those points only, so the reviews that matter leave an audit trail.</li>
-        <li>You get a board-ready report that ranks the risks and says what to fix first.</li>
+        <li><span><strong>Inventory.</strong> I map where your team uses AI, what data goes in, and the few places where a wrong answer could reach a client or a regulator.</span></li>
+        <li><span><strong>Test against the source.</strong> I check a sample of the AI&rsquo;s work against the source files, using a published method, and see whether your reviewers catch the mistakes.</span></li>
+        <li><span><strong>Sign-off where it counts.</strong> I set up a sign-off log at those points only, so the reviews that matter leave a record.</span></li>
+        <li><span><strong>Board-ready report.</strong> You get a written report that ranks each risk and says what to fix first.</span></li>
       </ol>
     </aside>
+  </div>
+</section>
+
+<section class="section" id="fit" aria-labelledby="fit-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Who this is for</span>
+      <h2 id="fit-title">For teams that have to answer for their AI use</h2>
+    </div>
+    <div class="offers-two">
+      <div class="offer">
+        <h3 class="offer-type">A good fit</h3>
+        <ul>
+          <li>Law firms whose lawyers or staff already use AI on client work</li>
+          <li>General counsel and in-house legal teams who answer to a board, an examiner or a regulator</li>
+          <li>Compliance and risk leaders at regulated companies, including insurers and banks</li>
+          <li>Teams that need to show how AI work gets reviewed in practice</li>
+        </ul>
+      </div>
+      <div class="offer">
+        <h3 class="offer-type">Not a fit</h3>
+        <ul>
+          <li>Teams looking for someone to build or sell them an AI tool</li>
+          <li>Anyone who needs legal advice or representation. DANDO LLC does not provide legal services.</li>
+          <li>Organizations that want a policy template without testing how review works</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -464,11 +512,12 @@
         <p class="offer-desc">A look at where your team uses AI, and whether the people who review its work would catch a mistake.</p>
         <div class="offer-receive">
           <span class="list-label">What you receive</span>
-          <p>A written report that ranks each problem by risk and says what to fix first. A board member can follow it.</p>
+          <p>A written report, plain enough for a board member, that ranks each problem by risk and says what to fix first. I quote the fee after the 30-minute call, once the scope is clear.</p>
         </div>
         <figure class="figure">
+          <span class="example-tag">Example</span>
           <a href="sample-report.jpg" target="_blank" rel="noopener"><img src="sample-report.jpg" width="1200" height="1553" loading="lazy" alt="Sample first page of an assessment report for a fictional insurer: a board summary, four risks ranked high to low with a fix for each, a sample test result, and a 90-day list."></a>
-          <figcaption>Illustrative first page of the report. The insurer and its figures are invented; the format is what a client receives. Every finding names a fix.</figcaption>
+          <figcaption>First page of an example report. The insurer and its figures are invented. The format is what a client receives.</figcaption>
         </figure>
         <a class="btn btn-primary" href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Ask about an assessment</a>
       </div>
@@ -501,10 +550,10 @@
       <article class="offer">
         <span class="offer-type">Ongoing engagement</span>
         <h3>Advisory</h3>
-        <p class="offer-desc">Ongoing help as your AI use grows, so reviews keep working day to day.</p>
+        <p class="offer-desc">Help after the assessment, as your team adds AI tools and new uses.</p>
         <ul>
-          <li>Designing and rolling out your AI rules</li>
-          <li>Clear rules for when a person must review AI work</li>
+          <li>Writing your AI use policy and putting it into practice</li>
+          <li>Deciding which AI work needs a named reviewer</li>
           <li>Regular reviews of your AI tools and vendors</li>
           <li>Briefings on AI risk for your board and leaders</li>
         </ul>
@@ -533,11 +582,26 @@
       <h2 id="approach-title">How an assessment runs</h2>
     </div>
     <ol class="flow" aria-label="The four steps">
-      <li><span class="fn" aria-hidden="true">1</span><div><h3>A short call</h3><p>You tell me where your team uses AI and what is at stake.</p><span class="out">30 minutes</span></div></li>
-      <li><span class="fn" aria-hidden="true">2</span><div><h3>Review</h3><p>I look at your AI tools and policies, then at how reviews really happen, and test a sample of the AI&rsquo;s work.</p><span class="out">On site or remote</span></div></li>
+      <li><span class="fn" aria-hidden="true">1</span><div><h3>A short call</h3><p>You tell me where your team uses AI and what is at stake. I quote the fee after the call.</p><span class="out">30 minutes</span></div></li>
+      <li><span class="fn" aria-hidden="true">2</span><div><h3>Review</h3><p>I look at your AI tools and policies, then at how your team reviews AI work day to day, and test a sample of that work.</p><span class="out">On site or remote</span></div></li>
       <li><span class="fn" aria-hidden="true">3</span><div><h3>Written report</h3><p>The report ranks each problem by risk and says what to fix first.</p><span class="out">Board-ready</span></div></li>
       <li><span class="fn" aria-hidden="true">4</span><div><h3>Follow-through</h3><p>If you want help making the fixes, the work can continue as advisory.</p><span class="out">Optional</span></div></li>
     </ol>
+    <figure class="exhibit" aria-labelledby="exhibit-tag exhibit-title">
+      <div class="exhibit-head"><span class="example-tag" id="exhibit-tag">Example</span><p class="exhibit-label" id="exhibit-title">What step 2 can turn up</p></div>
+      <div class="exhibit-pair">
+        <div class="exhibit-card">
+          <p class="exhibit-card-label">AI summary, approved by a reviewer</p>
+          <p class="quote">The customer can end the agreement <span class="miss">at any time</span> on 90 days&rsquo; notice.</p>
+        </div>
+        <div class="exhibit-card source">
+          <p class="exhibit-card-label">The contract, clause 14.2</p>
+          <p class="quote">The Customer may terminate this Agreement on ninety (90) days&rsquo; written notice, <mark>provided that no such notice may be given before the second anniversary of the Effective Date</mark>.</p>
+        </div>
+      </div>
+      <p class="exhibit-result"><strong>Missed:</strong> the summary drops the two-year lock-in, and the reviewer approved it without checking clause 14.2.</p>
+      <figcaption>The contract and the review are invented for illustration.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -549,11 +613,11 @@
     </div>
     <div class="thesis-body">
       <p>AI can write a draft or score a risk in seconds. A person still has to review it, often with less time than before. So the review shrinks to a quick look. If the answer looks right, it goes out.</p>
-      <p>More rules rarely fix this. Many add steps without making the review any better.</p>
+      <p>More rules rarely fix this, because most add steps without improving the review.</p>
       <p>Enterprise AI platforms keep a log of each question and answer. The log doesn&rsquo;t show whether anyone reviewed the answer against the source.</p>
       <p>Most everyday AI use needs only simple rules: which tools are approved, and what data stays out. A few decisions need more, the ones where AI output reaches a customer, a regulator or a legal position. Those need a reviewer who could actually catch a mistake, and a record that shows the review happened. This is what that record looks like:</p>
       <table class="log">
-        <caption>Sign-off log, illustrative excerpt. Names and files are invented.</caption>
+        <caption><span class="example-tag">Example</span>Sign-off log excerpt. Names and files are invented.</caption>
         <thead><tr><th scope="col">File</th><th scope="col">AI output</th><th scope="col">Reviewer</th><th scope="col">Checked against</th><th scope="col">Result</th></tr></thead>
         <tbody>
           <tr><td>CL-2041</td><td>Record summary</td><td>R. Alvarez</td><td>Medical record, 38 pp.</td><td class="ok">Accurate</td></tr>
@@ -561,7 +625,7 @@
           <tr><td>UW-0877</td><td>Declination letter</td><td>M. Chen</td><td>Underwriting file</td><td class="ok">Accurate</td></tr>
         </tbody>
       </table>
-      <p class="log-note">One line per review, kept only at those few points: who looked, what they compared it with, and what they found. When an examiner asks, this is the answer.</p>
+      <p class="log-note">One line per review, kept only at those few points: who looked, what they compared it with, and what they found.</p>
       <p class="thesis-link"><a href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Read the research: Coherence Under Acceleration &rarr;</a></p>
     </div>
   </div>
@@ -574,16 +638,9 @@
       <h2 id="research-title">The research behind the work</h2>
       <p>The advice draws on my published research about how AI changes professional judgment and how to test AI on legal work. The papers are posted on the Social Science Research Network (SSRN) and arXiv.</p>
     </div>
-    <div class="latest-wrap"><span class="list-label">Latest</span>
-      <ul class="latest" aria-label="Latest">
-        <li><time datetime="2026-10-07">Oct 7, 2026</time><span><a href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Coherence Under Acceleration</a> revised on SSRN.</span></li>
-        <li><time datetime="2026-08">Aug 2026</time><span>InsufficiencyBench receives a Best Paper Honorable Mention at the AI for Law Workshop, ICML 2026.</span></li>
-      </ul>
-    </div>
-
     <div class="papers">
       <div class="paper">
-        <span class="paper-meta">SSRN 5960914 &middot; revised October 2026</span>
+        <span class="paper-meta">SSRN 5960914 &middot; January 2026</span>
         <a class="paper-title" href="https://papers.ssrn.com/abstract=5960914" target="_blank" rel="noopener noreferrer">Coherence Under Acceleration</a>
         <p>How speed weakens judgment, and which controls keep reviews real.</p>
       </div>
@@ -593,13 +650,13 @@
         <p>How AI models answer legal questions that leave out key facts. Written with Vincent, Yu, Bean and Seedat. Best Paper Honorable Mention and an oral presentation at the AI for Law Workshop, International Conference on Machine Learning (ICML) 2026.</p>
       </div>
       <div class="paper">
-        <span class="paper-meta">SSRN 7587982 &middot; 2026</span>
+        <span class="paper-meta">SSRN 7587982 &middot; October 2026</span>
         <a class="paper-title" href="https://papers.ssrn.com/abstract=7587982" target="_blank" rel="noopener noreferrer">From CARE to Compliance</a>
         <p>Maps Indigenous data governance principles onto the NIST AI Risk Management Framework.</p>
       </div>
       <div class="paper">
         <span class="paper-meta">SSRN 5374930 &middot; August 2025</span>
-        <a class="paper-title" href="https://papers.ssrn.com/abstract=5374930" target="_blank" rel="noopener noreferrer">The REASON Framework v2</a>
+        <a class="paper-title" href="https://papers.ssrn.com/abstract=5374930" target="_blank" rel="noopener noreferrer">The REASON Framework</a>
         <p>A method for grading the legal reasoning in AI answers.</p>
       </div>
       <div class="paper">
@@ -620,7 +677,7 @@
     </div>
     <div class="about-layout">
       <div class="about-text">
-        <p class="about-bio">I founded DANDO and do every engagement myself. I&rsquo;m a regulatory attorney who came to AI from compliance work: 15+ years across anti-money laundering rules, healthcare privacy, private equity compliance and large-firm practice. Alongside this practice, I test leading AI models on legal tasks with the teams that build them.</p>
+        <p class="about-bio">I founded DANDO and do every engagement myself. I&rsquo;m a regulatory attorney who came to AI from compliance work. Since 2012 I have worked across anti-money laundering rules, healthcare privacy, private equity compliance and large-firm practice. I also test AI models on legal tasks for the companies that build them.</p>
         <p class="about-more"><span class="list-label">Education</span>Juris Doctor, University of Connecticut School of Law. Bachelor of Arts in Criminology and Criminal Justice, University of Maryland, College Park.</p>
       </div>
       <aside class="profile" aria-labelledby="profile-name">
@@ -631,7 +688,7 @@
         <ul class="facts">
           <li><span class="k">Bar admissions</span><span>District of Columbia and Maryland</span></li>
           <li><span class="k">Certification</span><span>Certified Anti-Money Laundering Specialist (CAMS), with a Sanctions Compliance Certificate</span></li>
-          <li><span class="k">Experience</span><span>15+ years in compliance, legal and governance work</span></li>
+          <li><span class="k">Experience</span><span>Legal, compliance and investigations work since 2012</span></li>
           <li><span class="k">Research</span><span>Best Paper Honorable Mention, AI for Law Workshop at ICML 2026</span></li>
         </ul>
         <a class="profile-link" href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn profile &rarr;</a>
@@ -644,9 +701,9 @@
   <div class="wrap">
     <div class="contact-inner">
       <span class="eyebrow">Contact</span>
-      <h2 id="contact-title">Start with a 20-minute call.</h2>
-      <p class="contact-lead">No charge. You describe where your team uses AI; I say whether an assessment would help and what it would cover.</p>
-      <p><a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Tv8VllMrl5kL9UvSXAp3iEmmsTnsm45xSdXyyjG5At5GldBkTYADpoZZcaoclMWQwm9wZTdU8" target="_blank" rel="noopener" class="btn btn-primary" data-book>Book a 20-minute call</a></p>
+      <h2 id="contact-title">Start with a 30-minute call.</h2>
+      <p class="contact-lead">The call is free. Tell me where your team uses AI, and I&rsquo;ll tell you whether an assessment would help and what it would cover. If it fits, I quote the fee after the call.</p>
+      <p><a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2Tv8VllMrl5kL9UvSXAp3iEmmsTnsm45xSdXyyjG5At5GldBkTYADpoZZcaoclMWQwm9wZTdU8" target="_blank" rel="noopener" class="btn btn-primary" data-book>Book a 30-minute call</a></p>
       <a href="mailto:daniel@dandollc.com" class="contact-email">daniel@dandollc.com</a>
       <ul class="topics" aria-label="Email about a specific topic">
         <li><a href="mailto:daniel@dandollc.com?subject=Assessment%20inquiry">Assessment</a></li>
@@ -665,16 +722,18 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img class="logo-light" src="dando-mark-on-light.png" width="186" height="192" alt="" aria-hidden="true">
-        <img class="logo-dark" src="dando-mark-on-dark.png" width="186" height="192" alt="" aria-hidden="true">
+        <img class="logo-light" src="dando-mark-nostar-on-light.png" width="177" height="192" alt="" aria-hidden="true">
+        <img class="logo-dark" src="dando-mark-nostar-on-dark.png" width="177" height="192" alt="" aria-hidden="true">
         <p>DANDO LLC</p>
-        <p class="tag">AI governance advisory and research</p>
+        <p class="tag">AI governance for law firms and general counsel</p>
       </div>
       <nav aria-label="Contact">
         <h2>Contact</h2>
         <ul>
           <li><a href="mailto:daniel@dandollc.com">daniel@dandollc.com</a></li>
-          <li><a href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/company/dando-llc/" target="_blank" rel="noopener noreferrer">DANDO LLC on LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/callowayesq/" target="_blank" rel="me noopener noreferrer">Daniel Calloway on LinkedIn</a></li>
+          <li><a href="https://x.com/callowayesq" target="_blank" rel="me noopener noreferrer">X</a></li>
         </ul>
       </nav>
       <div>
@@ -688,7 +747,6 @@
         <h2>Services</h2>
         <ul>
           <li><a href="./#services">AI governance assessment</a></li>
-          <li><a href="makeover.html">Practical AI setup for independent businesses</a></li>
         </ul>
       </nav>
     </div>
