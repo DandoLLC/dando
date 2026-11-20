@@ -106,7 +106,8 @@
   .nav { display: flex; align-items: center; gap: 1.5rem; }
   .nav a { font-size: 0.9375rem; color: var(--muted); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
   .nav a:hover { color: var(--fg); }
-  .nav .nav-cta { display: none; }
+  .nav .theme-btn { margin-left: -0.5rem; }
+  .cta-short { display: none; }
   .theme-btn, .menu-btn {
     font: 500 0.875rem/1 var(--f-sans); color: var(--fg); background: transparent;
     border: 1px solid var(--line-strong); border-radius: var(--radius);
@@ -126,14 +127,12 @@
       overflow-y: auto; overscroll-behavior: contain;
     }
     .nav a { min-height: 48px; border-bottom: 1px solid var(--line); color: var(--fg); }
-    .nav .nav-cta { display: flex; justify-content: center; margin-top: 1rem; border: 0; color: var(--on-action); }
-    .nav .nav-cta:hover { color: var(--on-action); }
+    .nav .theme-btn { margin: 1rem 0 0; min-height: 46px; }
     html:not(.js) .nav { position: static; flex: 0 0 100%; padding-left: 0; padding-right: 0; border-bottom: 0; max-height: none; overflow: visible; }
     html:not(.js) .header-inner { flex-wrap: wrap; }
     html.js .nav { display: none; }
     html.js .nav.is-open { display: flex; }
     html.js .menu-btn { display: inline-flex; align-items: center; }
-    .header-cta { display: none !important; }
   }
 
   /* Buttons */
@@ -148,6 +147,17 @@
   .btn-secondary { background: transparent; color: var(--fg); border-color: var(--line-strong); }
   .btn-secondary:hover { border-color: var(--fg); }
   .header-cta { min-height: 40px; font-size: 0.875rem; }
+  @media (max-width: 520px) {
+    .cta-long { display: none; }
+    .cta-short { display: inline; }
+  }
+  @media (max-width: 350px) {
+    .header-inner { gap: 0.5rem; }
+    .brand { gap: 0.45rem; }
+    .brand-name { font-size: 0.9375rem; white-space: nowrap; }
+    .header-cta, .menu-btn { padding: 0 0.55rem; }
+  }
+  .offer-alt { margin-top: 0.9rem; font-size: 0.9375rem; color: var(--muted); }
 
   /* Sections */
   .section { padding-block: 4.5rem; }
